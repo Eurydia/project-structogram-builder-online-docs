@@ -50,15 +50,15 @@ Symbols:
 
 A process renders to the diagram as is without any modifications.
 
-<iframe src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?content=A+simple+process"></iframe>
+[Try it out](https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?content=A+simple+process)
 
 Two processes can be placed on the same line by separating them with a semicolon `;`.
 
-<iframe src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?content=A+simple+process%3B%0AAnother+process%3B"></iframe>
+[Try it out](https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?content=A+simple+process%3BAnother+process)
 
 Without the semicolon, they are treated as the same process.
 
-<iframe src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?content=A+simple+process%0AAnother+process"></iframe>
+[Try it out](https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?content=A+simple+processAnother+process)
 
 ### For and while statement
 
@@ -73,7 +73,7 @@ They loses their meaning and are rendered as is.
 Tokens between the curly braces `{` and `}` are considered to be part of the body.
 They are rendered as processes and keep their meaning.
 
-<iframe src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?content=for+%28condition%29+%7B%0A++process%3B%0A++another+process%3B%0A%7D"></iframe>
+[Try it out](https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?content=for+%28condition%29+%7B%0A++process%3B%0A++another+process%3B%0A%7D)
 
 ### Do-while statement
 
@@ -85,7 +85,7 @@ They are rendered as processes and keep their meaning.
 Tokens between the parentheses `(` and `)` are considered to be part of the condition.
 They loses their meaning and are rendered as is.
 
-<iframe src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?content=do+%7B%0A++process%3B%0A++another+process%3B%0A%7D+while+%28condition%29%3B"></iframe>
+[Try it out](https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?content=do+%7B%0A++process%3B%0A++another+process%3B%0A%7D+while+%28condition%29%3B)
 
 ### If statement
 
@@ -97,11 +97,11 @@ They loses their meaning and are rendered as is.
 Tokens between the curly braces `{` and `}` are considered to be part of the body.
 They are rendered as processes and keep their meaning.
 
-<iframe src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?content=if+%28condition%29+%7B%0A++process%3B%0A++another+process%3B%0A%7D"></iframe>
+[Try it out](https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?content=if+%28condition%29+%7B%0A++process%3B%0A++another+process%3B%0A%7D)
 
 Optionally, the if statement can have an else statement.
 
-<iframe src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?content=if+%28condition%29+%7B%0A++process%3B%0A++another+process%3B%0A%7D+else+%7B%0A++process%3B%0A++another+process%3B%0A%7D"></iframe>
+[Try it out](https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?content=if+%28condition%29+%7B%0A++process%3B%0A++another+process%3B%0A%7D+else+%7B%0A++process%3B%0A++another+process%3B%0A%7D)
 
 ### Context-free grammar
 
@@ -113,11 +113,11 @@ Optionally, the if statement can have an else statement.
 ```bnf
 <diagram> ::= <statement>
 
-<statement> ::=   <token>* ';'          |
-                  <for-statement>       |
-                  <while-statement>     |
-                  <do-while-statement>  |
-                  <if-statement>
+<statement> ::= <token>* ';'
+            |   <for-statement>
+            |   <while-statement>
+            |   <do-while-statement>
+            |   <if-statement>
 
 <for-statement> ::= 'for' '(' <token>* ')' '{' <statement>* '}'
 
@@ -128,7 +128,8 @@ Optionally, the if statement can have an else statement.
 <if-statement> ::= 'if' '(' <token>* ')' '{' <statement>* '}' ['else' '{'<statement>* '}']
 
 <token> ::= <any-character>+
-<any-character> ::= <letter> |
-                    <digits> |
-                    <non-whitespace-character>
+
+<any-character> ::= <letter>
+                |   <digits>
+                |   <non-whitespace-character>
 ```
