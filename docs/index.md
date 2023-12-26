@@ -1,4 +1,4 @@
-# Documentation for Nassi-Shneiderman diagram builder
+# Documentation for online NSD builder
 
 ## Introduction
 
@@ -50,15 +50,58 @@ Symbols:
 
 A process renders to the diagram as is without any modifications.
 
-<iframe src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?content=A+simple+process" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="600px" allowfullscreen></iframe>
+<iframe src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?content=A+simple+process"></iframe>
 
 Two processes can be placed on the same line by separating them with a semicolon `;`.
 
-<iframe src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?content=A+simple+process%3B%0AAnother+process%3B" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="600px" allowfullscreen></iframe>
+<iframe src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?content=A+simple+process%3B%0AAnother+process%3B"></iframe>
 
 Without the semicolon, they are treated as the same process.
 
-<iframe src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?content=A+simple+process%0AAnother+process" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="600px" allowfullscreen></iframe>
+<iframe src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?content=A+simple+process%0AAnother+process"></iframe>
+
+### For and while statement
+
+Note that the while statement is simply an alias for the for statement.
+Under the hood, the while statement is converted to a for statement, so they are equivalent in every way.
+
+There are two components to the for statement, the "condition" and the "body".
+
+Tokens between the parentheses `(` and `)` are considered to be part of the condition.
+They loses their meaning and are rendered as is.
+
+Tokens between the curly braces `{` and `}` are considered to be part of the body.
+They are rendered as processes and keep their meaning.
+
+<iframe src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?content=for+%28condition%29+%7B%0A++process%3B%0A++another+process%3B%0A%7D"></iframe>
+
+### Do-while statement
+
+The do-while statement is similar to the for statement, but the "condition" component is placed after the "body" component.
+
+Tokens between the curly braces `{` and `}` are considered to be part of the body.
+They are rendered as processes and keep their meaning.
+
+Tokens between the parentheses `(` and `)` are considered to be part of the condition.
+They loses their meaning and are rendered as is.
+
+<iframe src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?content=do+%7B%0A++process%3B%0A++another+process%3B%0A%7D+while+%28condition%29%3B"></iframe>
+
+### If statement
+
+There are two components to the if statement, the "condition" and the "body".
+
+Tokens between the parentheses `(` and `)` are considered to be part of the condition.
+They loses their meaning and are rendered as is.
+
+Tokens between the curly braces `{` and `}` are considered to be part of the body.
+They are rendered as processes and keep their meaning.
+
+<iframe src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?content=if+%28condition%29+%7B%0A++process%3B%0A++another+process%3B%0A%7D"></iframe>
+
+Optionally, the if statement can have an else statement.
+
+<iframe src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?content=if+%28condition%29+%7B%0A++process%3B%0A++another+process%3B%0A%7D+else+%7B%0A++process%3B%0A++another+process%3B%0A%7D"></iframe>
 
 ### Context-free grammar
 
