@@ -103,12 +103,12 @@ The only exception to this is the `TokenKind.END` token which has an empty `text
 export type Lexer = {
 	content: string;
 	contentLength: number;
-	cursor: number;
+	cursorPos: number;
 };
 ```
 
 The `Lexer` type represents the lexer.
-It is a simple object with three properties: `content`, `contentLength`, and `cursor`.
+It is a simple object with three properties: `content`, `contentLength`, and `cursorPos`.
 
 Lexers should be initialized using the `lexerInit` function to ensure that the input is properly sanitized.
 
@@ -124,7 +124,7 @@ This string is not explicitly immutable, but the lexer does not change the strin
 `Lexer.contentLength` stores the length of the input string.
 It ensures that the lexer does not go out of bounds when advancing the cursor causing an index out of bounds error.
 
-### `Lexer.cursor` property
+### `Lexer.cursorPos` property
 
 `Lexer.cursor` stores the current position of the lexer.
 It keeps track of the current position of the lexer in the input string, and instead of modifying the input string, the lexer advances the cursor.
