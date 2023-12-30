@@ -1,8 +1,8 @@
 # Motivation
 
-The motivation for this project is less about NSD and more bout compiler technology.
+The motivation for this project is less about Nassi–Shneiderman diagram and more bout compiler technology.
 
-Early into the project, I realized that the builder had to generate an AST, and then use the AST to generate the diagram so I figured that this was the perfect opportunity to learn.
+Early into the project, I realized that the app had to build an [abstract syntax tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree), and render a diagram from it so I figured that this was the perfect opportunity to learn.
 
 As for the builder itself, there were a few criteria that I wanted to fulfil.
 

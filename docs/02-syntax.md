@@ -68,6 +68,8 @@ Optionally, the if statement can have an else statement.
 
 ## Context-free grammar
 
+For those of you who are interested, here is the context-free grammar of the language.
+
 - star `*` means zero or more repetitions of the preceding element.
 - pipe `|` means "or" only one of the elements can be present.
 - square brackets `[]` mean that the enclosed element is optional.
