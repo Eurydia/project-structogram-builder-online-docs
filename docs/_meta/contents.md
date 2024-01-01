@@ -1,8 +1,13 @@
 # Contents to be added
 
 - introduction
+
+  - what is it
+  - what it does
+
   - motivation
   - about
+
 - feature overview
   - constructed C-like syntax
   - flexible and easy to use
