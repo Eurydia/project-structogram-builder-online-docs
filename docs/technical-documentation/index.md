@@ -1,7 +1,24 @@
 # Overview
 
-This section will discuss, in more details, about the actual implementation of the project.
-There are three major parts to the project: the interpreter and the frontend, and each part will be discussed in its own section.
+This section discusses the implementation of the project.
+It is written entirely in [TypeScript](https://www.typescriptlang.org/) with [React](https://react.dev/) and bundled together using [vite](https://vitejs.dev/).
 
-- The interpreter section discusses the implementation of the lexer, parser, and the process of generating an AST from user
-- The frontend section discusses about layout and UI design, along with web technologies used in the project.
+In my persective, the project consists of three major parts.
+The interpreter and the renderer belong to the business logic, while the frontend belongs to the application logic.
+
+## The interpreter
+
+The interpreter builds an [abstract syntax trees](https://en.wikipedia.org/wiki/Abstract_syntax_tree) from user input.
+
+It is worth noting that I did not used any external libraries for the lexer and the parser.
+Instead, I wrote them from inituition, so the implementation may not be the most efficient.
+
+## The renderer
+
+The renderer takes an abstract syntax tree and generate a diagram.
+I should preface that the renderer is nothing more than a React component.
+
+## The frontend
+
+The frontend handles features discussed in [motivation](../01-motivation.md), such as exporting diagram and auto-saving.
+It also bridges the interpreter and the renderer.
