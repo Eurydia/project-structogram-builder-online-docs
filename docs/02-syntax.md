@@ -98,6 +98,7 @@ For those of you who are interested, here is the context-free grammar of the con
 Note that:
 
 - a star `*` means zero or more repetitions of the preceding element.
+- a plus `+` means one or more repetitions of the preceding element.
 - a verticle bar `|` means "or" only one of the elements can be present.
 - element enclosed by square brackets `[]` is optional.
 - characters enclosed by single quotes `'` is a literal.
