@@ -5,7 +5,7 @@ It is designed to be permissive and flexible to make the project easier to learn
 Moreover, it has similar syntax to the [C programming language](<https://en.wikipedia.org/wiki/C_(programming_language)>).
 I hope this will benefit experienced users, while helping new users.
 
-As of January 1st, 2024, the project supports process blocks, if-else blocks, test-first loop blocks, test-last loop blocks.
+As of January 1st, 2024, the project supports process blocks, test-first loop blocks, test-last loop blocks, and if-else blocks.
 I do not plan to add support for switch blocks since if-else blocks convey the same idea.
 Functions and procedures are relatively easy to implement, but the project does not supoort them yet.
 
@@ -38,11 +38,8 @@ Even better, you can describe what you want in the process.
 ## Test-first loop block
 
 Test-first loop blocks, also known as for loops or while loops, have two components.
-I refer to the first component as the "condition", and the second component as the "body".
-
-Texts between parentheses are belong to the "condition" component.
-
-Texts between curly braces are belong to the "body" component.
+First, texts between parentheses are belong to the "condition" component.
+Second, texts between curly braces are belong to the "body" component.
 
 <iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?content=for+%28condition%29+%7B%0A++process%3B%0A%7D"></iframe>
 
@@ -72,41 +69,38 @@ The property of the double dots can be confusing, so we can also write a descrip
 
 <iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?content=for+%28i+%3C-+from+1+to+10+increment+by+1%29+%7B%0A++...%3B%0A%7D"></iframe>
 
-## Do-while statement
+## Test-last loop block
 
-A do-while statement has two components which are the "condition" and the "body".
-Similar to for and while statements, they can be nested but the condition is placed after the body.
+Test-last loop blocks, also known as do-while loops, has two components.
+First, texts between curly braces are belong to the "body" component.
+Second, texts between parentheses are belong to the "condition" component.
 
-- Tokens between the curly braces `{` and `}` are considered to be part of the "body". They are rendered as processes and keep their meaning.
-- Tokens between the parentheses `(` and `)` are considered to be part of the "condition". They loses their meaning and are rendered as is similar to processes.
+Generally, test-last loop blocks supports everything that [test-first loop blocks](#test-first-loop-block) supports.
 
 <iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?content=do+%7B%0A++process%3B%0A%7D+while+%28condition%29%3B"></iframe>
 
-Here is an example on nested do-while statements.
+## If-else block
 
-<iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?content=do+%7B%0A++do+%7B%0A++++do+%7B%0A++++++uhhhhh...%3B%0A++++%7D+while+%28another+another+condition%29%3B%0A++%7D+while+%28another+condition%29%3B%0A%7D+while+%28condition%29%3B"></iframe>
-
-## If statement
-
-An if statement has two components which are the "condition" and the "body".
-
-- Tokens between the parentheses `(` and `)` are considered to be part of the "condition". They loses their meaning and are rendered as is similar to processes.
-- Tokens between the curly braces `{` and `}` are considered to be part of the "body". They are rendered as processes and keep their meaning.
+If blocks have two components.
+First, texts between parentheses are belong to the "condition" component.
+Second, texts between curly braces are belong to the "body" component.
 
 <iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?content=if+%28condition%29+%7B%0A++process%3B%0A%7D"></iframe>
 
-Optionally, the if statement can have an else statement.
+Optionally, you can convert an if block into an if-else block a keyword.
 
 <iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?content=if+%28condition%29+%7B%0A++process%3B%0A%7D+else+%7B%0A++another+process%3B%0A%7D"></iframe>
 
 ## Context-free grammar
 
-For those of you who are interested, here is the context-free grammar of the language.
+For those of you who are interested, here is the context-free grammar of the constructed language.
 
-- star `*` means zero or more repetitions of the preceding element.
-- pipe `|` means "or" only one of the elements can be present.
-- square brackets `[]` mean that the enclosed element is optional.
-- any character enclosed by single quotes `'` is a literal.
+Note that:
+
+- a star `*` means zero or more repetitions of the preceding element.
+- a verticle bar `|` means "or" only one of the elements can be present.
+- element enclosed by square brackets `[]` is optional.
+- characters enclosed by single quotes `'` is a literal.
 
 ```bnf
 <diagram> ::= <statement>
