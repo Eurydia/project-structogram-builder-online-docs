@@ -13,12 +13,9 @@ It has to be easy to learn and easy to use.
 
 There are a few features that I want to make sure the project has.
 
-First, one of the most important aspect of the project is the ability to export the diagrams as images or share the diagrams via unique links.
-Without this feature, I would say that this project is, essentially, pointless.
+One of the most important aspect of the project is the ability to export diagrams as images or share them via unique links.
 
-Secondly, the project should have a live preview of the diagram.
-I drew heavy inspiration from [CodePen](https://codepen.io/), [re.plit](https://replit.com/), and [jsfiddle](https://jsfiddle.net/).
+I imagine that working without live preview would make this project rather disturbing for the users.
+Auto-saving is alsl needed so users can start working where they left off.
 
-Thirdly, I want the project should automatically save the diagram, so users can start working where they left off.
-
-Lastly, the user interface has to feel modern.
+Finally, the user interface has to feel modern, though I feel that this one is a bit on the nose, I want to make sure that I listed it here.
