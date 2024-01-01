@@ -3,7 +3,7 @@ site_name: NSD builder docs
 theme:
     name: 'material'
     font:
-      text: Fira Code
+      text: Roboto Mono
       code: IBM Plex Mono 
     palette:
       scheme: slate

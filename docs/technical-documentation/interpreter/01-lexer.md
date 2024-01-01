@@ -1,6 +1,6 @@
 # Lexer
 
-The lexer is responsible for tokenizing the user input.
+The lexer tokenizes the user input.
 Its implementation can be found at the [lexer](https://github.com/Eurydia/project-nassi-shneiderman-diagram-builder-online/blob/1bf484c9082dc5ea0fcfc6cf37121d273f7831b5/src/interpreter/lexer.ts) module.
 
 The interface of the module is as follows:
