@@ -1,12 +1,24 @@
 # Motivation
 
-The motivation for this project is less about Nassi–Shneiderman diagram and more bout compiler technology.
+I wanted to develop a diagramming tool which build a [Nassi–Shneiderman diagram](https://en.wikipedia.org/wiki/Nassi%E2%80%93Shneiderman_diagram) from a piece of code.
 
-Early into the project, I realized that the app had to build an [abstract syntax tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree), and render a diagram from it so I figured that this was the perfect opportunity to learn.
+## Syntax
 
-As for the builder itself, there were a few criteria that I wanted to fulfil.
+I want to construct a new language for the project, but I think it is more appropriate to say "pseudocode".
 
-- The builder must use a C-style syntax, and the syntax should be forgiving and permissive.
-- The builder must have a live preview and the ability to export the diagram as an image or share it as a URL.
+This pseudocode has to be permissive and flexible to accommodate for the nature of Nassi–Shneiderman diagrams.
+It has to be easy to learn and easy to use.
 
-Another ulterior motive for this project is to create a tool that would provide an alternative to the NSD editor provided by programm course at ELTE so, in that regard, I want to make sure that the builder has a modern UI.
+## Features
+
+There are a few features that I want to make sure the project has.
+
+First, one of the most important aspect of the project is the ability to export the diagrams as images or share the diagrams via unique links.
+Without this feature, I would say that this project is, essentially, pointless.
+
+Secondly, the project should have a live preview of the diagram.
+I drew heavy inspiration from [CodePen](https://codepen.io/), [re.plit](https://replit.com/), and [jsfiddle](https://jsfiddle.net/).
+
+Thirdly, I want the project should automatically save the diagram, so users can start working where they left off.
+
+Lastly, the user interface has to feel modern.
