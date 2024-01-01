@@ -87,7 +87,7 @@ Second, texts between curly braces are belong to the "body" component.
 
 <iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?content=if+%28condition%29+%7B%0A++process%3B%0A%7D"></iframe>
 
-Optionally, you can convert an if block into an if-else block a keyword.
+Optionally, you can convert an if block into an if-else block using the `else` keyword.
 
 <iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?content=if+%28condition%29+%7B%0A++process%3B%0A%7D+else+%7B%0A++another+process%3B%0A%7D"></iframe>
 
