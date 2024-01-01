@@ -1,8 +1,16 @@
 # Syntax
 
-The NSD builder uses a custom syntax to generate the diagram, which is similar to the C programming language.
+I have constructed a new "language" for this project.
+It is designed to be permissive and flexible to make the project easier to learn and use.
+Moreover, it has similar syntax to the [C programming language](<https://en.wikipedia.org/wiki/C_(programming_language)>).
+I hope this will benefit experienced users, while helping new users.
 
-Note if you are using a small screen like a phone, the live preview is hidden by default, you can show it by toggling the code button.
+As of January 1st, 2024, the project supports process blocks, if-else blocks, test-first loop blocks, test-last loop blocks.
+I do not plan to add support for switch blocks since if-else blocks convey the same idea.
+Functions and procedures are relatively easy to implement, but the project does not supoort them yet.
+
+On this section, I have embedded multiple interactive examples using `iframe` elements.
+However, on smaller screens, live preview is shown by default.
 
 ## Process
 
@@ -12,7 +20,7 @@ Processes will be rendered as is without any modification.
 
 <iframe width="100%" style="aspect-ratio: 16/9; border:none;" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?content=process%3B"></iframe>
 
-Two processes can be placed on the same line, just like in the C programming language.
+When one line contains two processes, the project uses semicolon `;` to distinquish them apart.
 
 <iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?content=process%3Banother+process%3B"></iframe>
 
