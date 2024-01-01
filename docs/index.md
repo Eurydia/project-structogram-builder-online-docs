@@ -8,6 +8,6 @@ The working version has been deployed at [https://eurydia.github.io/project-nass
 ## Syntax
 
 The project uses a special [pseudocode](https://en.wikipedia.org/wiki/Pseudocode), which I have constructed from scratch for this tool.
-The syantax draws heavy inspiration from the syntax of the C programming language.
+The syantax draws heavy inspiration from the syntax of the [C programming language](<https://en.wikipedia.org/wiki/C_(programming_language)>).
 
 Users are encouraged to visit the [Syntax](./02-syntax.md) section for more information.
