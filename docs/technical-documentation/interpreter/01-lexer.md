@@ -17,7 +17,6 @@ export type Lexer;
 
 export const lexerInit: (content: string) => Lexer;
 export const lexerGetAllTokens: (lexer: Lexer) => Token[];
-const lexerSafeGetNextCharThenAdvance: (lexer: Lexer) => string;
 const lexerSafeGetNextTokenThenAdvance: (lexer: Lexer) => Token;
 const lexerTrimLeft: (lexer: Lexer) => void;
 ```
@@ -170,11 +169,14 @@ while (
 ) {}
 ```
 
-Outside of the while loop, I declared a variable of type [token](#token-type), but I did not initialize its value.
+Outside of the while loop, it declares a variable of type [token](#token-type).
 
-Then, in a condition, I invoke [lexerSafeGetNextTokenThenAdvance](#lexersafegetnexttokenthenadvance-function) which returns a token.
+```ts
+let token: Token;
+```
 
-Then, I assign the returned token to the declared variable.
+Then, in a condition, it invokes [lexerSafeGetNextTokenThenAdvance](#lexersafegetnexttokenthenadvance-function) which returns a token.
+It assign the returned token to the declared variable.
 
 ```ts
 token = lexerSafeGetNextTokenThenAdvance(l);
@@ -182,7 +184,7 @@ token = lexerSafeGetNextTokenThenAdvance(l);
 
 In JavaScript, the [assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) operation has a return value which is the right-hand side of the equal sign.
 
-So I can access the `kind` property of the returned token.
+It can access the `kind` property of the returned token.
 
 ```ts
 (token = lexerSafeGetNextTokenThenAdvance(l))
@@ -213,8 +215,7 @@ export const lexerSafeGetNextTokenThenAdvance = (
 		return token;
 	}
 
-	token["text"] =
-		lexerSafeGetNextCharThenAdvance(l);
+	token["text"] = l.content[l.cursorPos];
 
 	if (token["text"] in LITERAL_TOKENS) {
 		token["kind"] = LITERAL_TOKENS[token["text"]];
@@ -230,7 +231,7 @@ export const lexerSafeGetNextTokenThenAdvance = (
 		l.cursorPos++;
 	}
 
-	if (KEYWORDS.includes(token.text)) {
+	if (KEYWORDS.includes(token["text"])) {
 		token["kind"] = TokenKind.KEYWORD;
 		return token;
 	}
@@ -245,14 +246,14 @@ The `lexerSafeGetNextTokenThenAdvance` function returns a [token](#token-type).
 This function does a majority of the work, but the idea is that it tokenize the user input and return a token.
 If it has completely tokenize a lexer, it returns a `TokenKind.END` token.
 
-Firstly, it calls [lexerTrimLeft](#lexertrimleft-function) to skip all leading whitespace characters.
+First, it calls [lexerTrimLeft](#lexertrimleft-function) to skip all leading whitespace characters.
 This will move the cursor to a non-whitespace character or the end of user input.
 
 ```ts
 lexerTrimLeft(l);
 ```
 
-It prepares a placeholder token with `TokenKind.END` and empty string.
+Then, it prepares a placeholder token with `TokenKind.END` and empty string.
 
 ```ts
 const token = {
@@ -270,39 +271,92 @@ if (l.cursorPos >= l.contentLength) {
 ```
 
 Otherwise, there is at least one character left to be tokenize.
+It consumes the current character and advances the cursor.
 
-Then, it checks if the lexer has reached the end of the input.
-If it has reached the end, it returns a `TokenKind.END` token.
+```ts
+token["text"] = l.content[l.cursorPos];
+l.cursorPos++;
+```
 
-If there are characters left, it calls `lexerSafeGetNextCharThenAdvance` to get the next character, this collects the current character and moves the cursor forward.
+It checks whether the character is one of the [LITERAL_TOKENS](#literal_tokens-record) or not.
 
-Then, it checks if the current character is a literal token or not.
-If it is, it returns a token with appropriate `TokenKind` kind.
+```ts
+if (token["text"] in LITERAL_TOKENS) {
+}
+```
+
+If the token should be interpreted as a literal token, it sets the `kind` property to the appropriate value, and returns the token.
+
+```ts
+token["kind"] = LITERAL_TOKENS[token["text"]];
+return token;
+```
 
 If it is not a literal token, it collects the rest of the characters until it reaches a whitespace character or a literal token.
 
-Then it checks whether the collected characters forms a keyword or not.
-
-If they form a keyword, it returns a `TokenKind.KEYWORD` token.
-
-If they do not form a keyword, it returns a `TokenKind.SYMBOL` token.
-
-## `lexerSafeGetNextCharThenAdvance` function
-
 ```ts
-const lexerSafeGetNextCharThenAdvance: (
-	lexer: Lexer,
-) => string;
+while (
+	l.cursorPos < l.contentLength &&
+	!(l.content[l.cursorPos] in LITERAL_TOKENS) &&
+	!/\s/.test(l.content[l.cursorPos])
+) {
+	token["text"] += l.content[l.cursorPos];
+	l.cursorPos++;
+}
 ```
 
-The `lexerSafeGetNextCharThenAdvance` function collects the current character and moves the cursor forward.
+The first condition prevents over-indexing.
 
-If the cursor has reached the end, it returns an empty string.
+```ts
+l.cursorPos < l.contentLength;
+```
+
+The second condition terminates the loop if it encounters a literal token.
+
+```ts
+!(l.content[l.cursorPos] in LITERAL_TOKENS);
+```
+
+The third condition terminates the loop if it encounters a whitespace character.
+
+```ts
+!/\s/.test(l.content[l.cursorPos]);
+```
+
+After the loop has terminate, it checks whether the collected characters form a keyword or not.
+
+```ts
+if (KEYWORDS.includes(token["text"])) {
+}
+```
+
+If they form a keyword, it sets the `kind` property on the token to `TokenKind.KEYWORD` and returns the token.
+
+```ts
+token["kind"] = TokenKind.KEYWORD;
+return token;
+```
+
+If they do not form a keyword, it sets the `kind` property on the token to `TokenKind.SYMBOL` and returns the token.
+
+```ts
+token["kind"] = TokenKind.SYMBOL;
+return token;
+```
 
 ## `lexerTrimLeft` function
 
 ```ts
-const lexerTrimLeft: (lexer: Lexer) => void;
+const lexerTrimLeft = (l: Lexer): void => {
+	while (
+		l.cursorPos < l.contentLength &&
+		/\s/.test(l.content[l.cursorPos])
+	) {
+		l.cursorPos++;
+	}
+};
 ```
 
-This function skips all leading whitespace characters by moving the cursor forward until it reaches the first a non-whitespace character.
+The `lexerTrimLeft` function is a helper to [lexerSafeGetNextTokenThenAdvance](#lexersafegetnexttokenthenadvance-function) function.
+
+It consumes whitespace characters by moving the cursor forward until it reaches the first a non-whitespace character.
