@@ -279,17 +279,13 @@ l.cursorPos++;
 ```
 
 It checks whether the character is one of the [LITERAL_TOKENS](#literal_tokens-record) or not.
-
-```ts
-if (token["text"] in LITERAL_TOKENS) {
-}
-```
-
 If the token should be interpreted as a literal token, it sets the `kind` property to the appropriate value, and returns the token.
 
 ```ts
-token["kind"] = LITERAL_TOKENS[token["text"]];
-return token;
+if (token["text"] in LITERAL_TOKENS) {
+	token["kind"] = LITERAL_TOKENS[token["text"]];
+	return token;
+}
 ```
 
 If it is not a literal token, it collects the rest of the characters until it reaches a whitespace character or a literal token.
@@ -323,18 +319,14 @@ The third condition terminates the loop if it encounters a whitespace character.
 !/\s/.test(l.content[l.cursorPos]);
 ```
 
-After the loop has terminate, it checks whether the collected characters form a keyword or not.
-
-```ts
-if (KEYWORDS.includes(token["text"])) {
-}
-```
-
+After the loop has terminated, it checks whether the collected characters form a keyword or not.
 If they form a keyword, it sets the `kind` property on the token to `TokenKind.KEYWORD` and returns the token.
 
 ```ts
-token["kind"] = TokenKind.KEYWORD;
-return token;
+if (KEYWORDS.includes(token["text"])) {
+	token["kind"] = TokenKind.KEYWORD;
+	return token;
+}
 ```
 
 If they do not form a keyword, it sets the `kind` property on the token to `TokenKind.SYMBOL` and returns the token.
