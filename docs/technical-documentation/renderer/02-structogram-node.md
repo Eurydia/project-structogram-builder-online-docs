@@ -2,8 +2,6 @@
 
 This compnent is a collection of smaller components that are used to render a `Node` object as a `StructogramNodeLoopFirst`, `StructogramNodeLoopLast`, `StructogramNodeIfElse`, or `StructogramNodeProcess` component based on its `kind` property.
 
-The `StructogramNode` component is a functional component that takes a `Node` object and optional border properties as its props. It uses a switch statement to determine the `kind` of the `Node` object and renders different components accordingly.
-
 Here is an interface of the component:
 
 ```tsx
