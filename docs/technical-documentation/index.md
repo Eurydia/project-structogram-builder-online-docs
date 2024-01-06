@@ -3,8 +3,9 @@
 This section discusses the implementation of the project.
 It is written entirely in [TypeScript](https://www.typescriptlang.org/) with [React](https://react.dev/) and bundled together using [vite](https://vitejs.dev/).
 
-In my persective, the project consists of three major parts.
-The interpreter and the renderer belong to the business logic, while the frontend belongs to the application logic.
+In my persective, the project consists of three major parts: the interpreter,the renderer, and the frontend.
+
+The interpreter and the renderer belong to the business logic, abd the frontend belongs to the application logic.
 
 ## Interpreter
 

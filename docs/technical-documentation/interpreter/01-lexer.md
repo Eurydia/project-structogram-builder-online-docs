@@ -1,12 +1,10 @@
 # Lexer
 
-The lexer tokenizes the user input.
-Its implementation can be found at the [lexer](https://github.com/Eurydia/project-nassi-shneiderman-diagram-builder-online/blob/1bf484c9082dc5ea0fcfc6cf37121d273f7831b5/src/interpreter/lexer.ts) module.
+The primary purpose of this module is to convert a string into a sequence of tokens.
 
-The interface of the module is as follows:
+Here is an interface of the module:
 
 ```ts
-// src/interpreter/lexer.ts
 export enum TokenKind {}
 export type Token;
 
@@ -17,8 +15,7 @@ export type Lexer;
 
 export const lexerInit: (content: string) => Lexer;
 export const lexerGetAllTokens: (lexer: Lexer) => Token[];
-const lexerSafeGetNextTokenThenAdvance: (lexer: Lexer) => Token;
-const lexerTrimLeft: (lexer: Lexer) => void;
+const lexerGetNextTokenThenAdvance: (lexer: Lexer) => Token;
 ```
 
 ## `TokenKind` enum
@@ -34,12 +31,21 @@ export enum TokenKind {
 	LEFT_CURLY,
 	RIGHT_CURLY,
 	SEMICOLON,
+
+	WHITE_SPACE,
 }
 ```
 
-The `TokenKind` enum represents the type of a token.
+The `TokenKind` enumeration categorize the different types of tokens that a lexer recognizes.
+Each token is assigned a `TokenKind` to denote its type.
 
-The purpose of each member is discussed later in parts of this section.
+- `END`: represents the end of the input. When a lexer encounters this token, it knows there are no more tokens to process.
+- `SYMBOL`: represents any piece of text.
+- `KEYWORD`: represents keywords, like `if`, `for`, `while`, etc.
+- `LEFT_PAREN` and `RIGHT_PAREN`: represent left and right parentheses (`(...)`), respectively.
+- `LEFT_CURLY` and `RIGHT_CURLY`: represent left and right curly braces (`{...}`), respectively.
+- `SEMICOLON`: represents the semicolon (`;`) used at the end of statements.
+- `WHITE_SPACE`: represents any whitespace characters, like spaces, tabs, or newlines.
 
 ## `Token` type
 
@@ -50,13 +56,13 @@ export type Token = {
 };
 ```
 
-The `Token` type represents a token.
+The `Token` type represents a token in a string.
+A token is a meaningful sequence of characters, such as a keyword or a delimiter.
 
-The `kind` property represents which kind of token it is.
+A token is an object with two properties:
 
-The `text` property represents the piece of text that made up the token.
-Since the lexer removes whitespace characters, this property will be non-empty.
-The only exception is `TokenKind.END` tokens which has an empty `text` property.
+- `kind`: represents a `TokenKind`, which is an enumeration of the different types of tokens that can be recognized.
+- `text`: represents the actual text of the token.
 
 ## `KEYWORDS` array
 
@@ -70,10 +76,10 @@ const KEYWORDS: string[] = [
 ];
 ```
 
-The `KEYWORD` array stores reserved keywords.
+The `KEYWORDS` array defines a list of keywords for the lexer.
 
-I added it reduce code duplication in [lexerSafeGetNextTokenThenAdvance](#lexersafegetnexttokenthenadvance-function) function.
-In the future, if I want to introduce additional keywords, I can add them to this array.
+During tokenization, a lexer checks if each word in the string is in the `KEYWORDS` array.
+If it is, the lexer creates a `Token` with a `kind` of `TokenKind.KEYWORD`.
 
 ## `LITERAL_TOKENS` record
 
@@ -88,9 +94,10 @@ const LITERAL_TOKENS: Record<string, TokenKind> =
 	};
 ```
 
-The `LITERAL_TOKENS` record maps each literal token to their appropriate [kind](#tokenkind-enum).
+The `LITERAL_TOKENS` object defines a mapping of literal characters to their corresponding token kinds.
 
-Similar to the [KEYWORDS](#keywords-array) array, I added it to reduce code duplication in [lexerSafeGetNextTokenThenAdvance](#lexersafegetnexttokenthenadvance-function) function.
+During tokenization, a lexer checks if each character in the string is a key in the `LITERAL_TOKENS` object.
+If it is, the lexer creates a `Token` with a `kind` that corresponds to the value of that key in the `LITERAL_TOKENS` object.
 
 ## `Lexer` type
 
@@ -102,18 +109,13 @@ export type Lexer = {
 };
 ```
 
-The `Lexer` type represents a lexer.
+The `Lexer` type defines the structure of a lexer object.
 
-Lexers are initialized with [lexerInit](#lexerinit-function) function.
-After a lexer is initialized, use [lexerGetAllTokens](#lexergetalltokens-function) to obtain a list of [token](#token-type).
+A lexer is an object with three properties:
 
-The `content` property stores content of a particular lexer.
-Though the property is not explicitly immutable, a lexer does not change manipulate it directly.
-
-The `contentLength` property stores the length of `content` during initialization of a lexer.
-I added this property so I do not have to keep using [length](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length) property.
-
-The `cursorPos` property stores the current position of the cursor.
+- `content` represents a string which is being tokenize.
+- `contentLength` that represents the length of the `content` string. This is useful for when a lexer needs to check if it has reached the end of the `content` string.
+- `cursorPos` represents the current position of the cursor in the `content` string. This is used to keep track of where a lexer is in the `content` string during tokenization.
 
 ## `lexerInit` function
 
@@ -129,83 +131,20 @@ export const lexerInit = (
 };
 ```
 
-The `lexerInit` function initializes a [lexer](#lexer-type) object from user input.
+The `lexerInit` function initializes a new `Lexer` object with a given string.
+It is used to prepare a `Lexer` object for the tokenization process.
 
-Calling [normalize](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize) on user input is quite important due to the way accented characters behave.
+The function takes a string argument `content`.
+It returns a `Lexer` object with the `content` property set to the normalized version of the `content` string, the `contentLength` property set to the length of the normalized `content` string, and the `cursorPos` property set to 0.
 
-## `lexerGetAllTokens` function
+Calling [normalize](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize) on user input is quite important due to the way [accented characters](https://stackoverflow.com/questions/63013552/whats-the-point-of-string-normalize) behave.
 
-```ts
-export const lexerGetAllTokens = (
-	l: Lexer,
-): Token[] => {
-	const tokens: Token[] = [];
-	let token: Token;
-	while (
-		(token = lexerSafeGetNextTokenThenAdvance(l))
-			.kind !== TokenKind.END
-	) {
-		tokens.push(token);
-	}
-	return tokens;
-};
-```
-
-The `lexerGetAllTokens` function takes a [lexer](#lexer-type) and return a list of [tokens](#token-type) left in it.
-
-I added this function to simplify the interface.
-The real work is done by [lexerSafeGetNextTokenThenAdvance](#lexersafegetnexttokenthenadvance-function) function.
-
-The `tokens` array collects the tokens.
-The function returns this array back to the caller.
-
-The "magic" part about this function lies in following snippet, so let me clarify what happens.
+## `lexerGetNextTokenThenAdvance` function
 
 ```ts
-let token: Token;
-while (
-	(token = lexerSafeGetNextTokenThenAdvance(l))
-		.kind !== TokenKind.END
-) {}
-```
-
-Outside of the while loop, it declares a variable of type [token](#token-type).
-
-```ts
-let token: Token;
-```
-
-Then, in a condition, it invokes [lexerSafeGetNextTokenThenAdvance](#lexersafegetnexttokenthenadvance-function) which returns a token.
-It assign the returned token to the declared variable.
-
-```ts
-token = lexerSafeGetNextTokenThenAdvance(l);
-```
-
-In JavaScript, the [assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) operation has a return value which is the right-hand side of the equal sign.
-
-It can access the `kind` property of the returned token.
-
-```ts
-(token = lexerSafeGetNextTokenThenAdvance(l))
-	.kind;
-```
-
-The loop terminates once the returned token is a `TokenKind.END` token.
-
-```ts
-(token = lexerSafeGetNextTokenThenAdvance(l))
-	.kind !== TokenKind.END;
-```
-
-## `lexerSafeGetNextTokenThenAdvance` function
-
-```ts
-export const lexerSafeGetNextTokenThenAdvance = (
+export const lexerGetNextTokenThenAdvance = (
 	l: Lexer,
 ): Token => {
-	lexerTrimLeft(l);
-
 	const token = {
 		kind: TokenKind.END,
 		text: "",
@@ -215,7 +154,15 @@ export const lexerSafeGetNextTokenThenAdvance = (
 		return token;
 	}
 
+	if (/\s/.test(l.content[l.cursorPos])) {
+		token["kind"] = TokenKind.WHITE_SPACE;
+		token["text"] = l.content[l.cursorPos];
+		l.cursorPos++;
+		return token;
+	}
+
 	token["text"] = l.content[l.cursorPos];
+	l.cursorPos++;
 
 	if (token["text"] in LITERAL_TOKENS) {
 		token["kind"] = LITERAL_TOKENS[token["text"]];
@@ -241,56 +188,61 @@ export const lexerSafeGetNextTokenThenAdvance = (
 };
 ```
 
-The `lexerSafeGetNextTokenThenAdvance` function returns a [token](#token-type).
+The `lexerGetNextTokenThenAdvance` function tokenize the next token from a `Lexer` object and advance the cursor position.
+It is a key part of the tokenization process.
 
-This function does a majority of the work, but the idea is that it tokenize the user input and return a token.
-If it has completely tokenize a lexer, it returns a `TokenKind.END` token.
+The function takes a `Lexer` object as an argument and returns a `Token` object.
 
-First, it calls [lexerTrimLeft](#lexertrimleft-function) to skip all leading whitespace characters.
-This will move the cursor to a non-whitespace character or the end of user input.
+The breakdown of the function is as follows:
 
-```ts
-lexerTrimLeft(l);
-```
-
-Then, it prepares a placeholder token with `TokenKind.END` and empty string.
+First, it starts by creating a `Token` object with a `kind` of `TokenKind.END` and an empty `text` string.
+If the cursor position in the `Lexer` object is at or beyond the end of the content string, it returns this `Token` object as is.
 
 ```ts
+// ...
 const token = {
 	kind: TokenKind.END,
 	text: "",
 };
-```
 
-If the cursor would be out of bound, it returns the placeholder token.
-
-```ts
 if (l.cursorPos >= l.contentLength) {
 	return token;
 }
+// ...
 ```
 
-Otherwise, there is at least one character left to be tokenize.
-It consumes the current character and advances the cursor.
+If the character at the cursor position is a whitespace character, it sets the `kind` of the `Token` object to `TokenKind.WHITE_SPACE`, sets the `text` of the `Token` object to the whitespace character, increments the cursor position, and returns the `Token` object.
 
 ```ts
+// ...
+if (/\s/.test(l.content[l.cursorPos])) {
+	token["kind"] = TokenKind.WHITE_SPACE;
+	token["text"] = l.content[l.cursorPos];
+	l.cursorPos++;
+	return token;
+}
+// ...
+```
+
+Otherwise, it sets the `text` of the `Token` object to the character at the cursor position and increments the cursor position.
+If the character is a key in the `LITERAL_TOKENS` object, it sets the `kind` of the `Token` object to the corresponding value in the `LITERAL_TOKENS` object and returns the `Token` object.
+
+```ts
+// ...
 token["text"] = l.content[l.cursorPos];
 l.cursorPos++;
-```
 
-It checks whether the character is one of the [LITERAL_TOKENS](#literal_tokens-record) or not.
-If the token should be interpreted as a literal token, it sets the `kind` property to the appropriate value, and returns the token.
-
-```ts
 if (token["text"] in LITERAL_TOKENS) {
 	token["kind"] = LITERAL_TOKENS[token["text"]];
 	return token;
 }
+// ...
 ```
 
-If it is not a literal token, it collects the rest of the characters until it reaches a whitespace character or a literal token.
+If the character is not a key in the `LITERAL_TOKENS` object, it continues to add the following characters to the `text` of the `Token` object and increment the cursor position until it reaches a character that is a key in the `LITERAL_TOKENS` object or a whitespace character, or until it reaches the end of the content string.
 
 ```ts
+// ...
 while (
 	l.cursorPos < l.contentLength &&
 	!(l.content[l.cursorPos] in LITERAL_TOKENS) &&
@@ -299,56 +251,72 @@ while (
 	token["text"] += l.content[l.cursorPos];
 	l.cursorPos++;
 }
+// ...
 ```
 
-The first condition prevents over-indexing.
+If the `text` of the `Token` object is a keyword, it sets the `kind` of the `Token` object to `TokenKind.KEYWORD` and returns the `Token` object.
+Otherwise, it sets the `kind` of the `Token` object to `TokenKind.SYMBOL` and returns the `Token` object.
 
 ```ts
-l.cursorPos < l.contentLength;
-```
-
-The second condition terminates the loop if it encounters a literal token.
-
-```ts
-!(l.content[l.cursorPos] in LITERAL_TOKENS);
-```
-
-The third condition terminates the loop if it encounters a whitespace character.
-
-```ts
-!/\s/.test(l.content[l.cursorPos]);
-```
-
-After the loop has terminated, it checks whether the collected characters form a keyword or not.
-If they form a keyword, it sets the `kind` property on the token to `TokenKind.KEYWORD` and returns the token.
-
-```ts
+// ...
 if (KEYWORDS.includes(token["text"])) {
 	token["kind"] = TokenKind.KEYWORD;
 	return token;
 }
-```
 
-If they do not form a keyword, it sets the `kind` property on the token to `TokenKind.SYMBOL` and returns the token.
-
-```ts
 token["kind"] = TokenKind.SYMBOL;
 return token;
+// ...
 ```
 
-## `lexerTrimLeft` function
+## `lexerGetAllTokens` function
 
 ```ts
-const lexerTrimLeft = (l: Lexer): void => {
+export const lexerGetAllTokens = (
+	l: Lexer,
+): Token[] => {
+	const tokens: Token[] = [];
+	let token: Token;
 	while (
-		l.cursorPos < l.contentLength &&
-		/\s/.test(l.content[l.cursorPos])
+		(token = lexerGetNextTokenThenAdvance(l))
+			.kind !== TokenKind.END
 	) {
-		l.cursorPos++;
+		tokens.push(token);
 	}
+	return tokens;
 };
 ```
 
-The `lexerTrimLeft` function is a helper to [lexerSafeGetNextTokenThenAdvance](#lexersafegetnexttokenthenadvance-function) function.
+The `lexerGetAllTokens` function generates a list of all tokens from a `Lexer` object.
+It is used to tokenize an entire string at once.
 
-It consumes whitespace characters by moving the cursor forward until it reaches the first a non-whitespace character.
+The function takes a `Lexer` object as an argument and returns an array of `Token` objects.
+
+The breakdown of the function is as follows:
+
+First, it starts by creating an empty array `tokens` to store the `Token` objects.
+
+```ts
+// ...
+const tokens: Token[] = [];
+// ...
+```
+
+Then, it enters a while loop where it calls the `lexerGetNextTokenThenAdvance` function with the `Lexer` object as the argument to get the next `Token` object and advance the cursor position.
+If the `kind` of the `Token` object is `TokenKind.END`, it breaks out of the while loop.
+Otherwise, it pushes the `Token` object to the `tokens` array and continues the loop.
+
+After the while loop, it returns the `tokens` array, which contains all the `Token` objects that represent the tokens in the `Lexer` object's content string.
+
+```ts
+// ...
+let token: Token;
+while (
+	(token = lexerGetNextTokenThenAdvance(l))
+		.kind !== TokenKind.END
+) {
+	tokens.push(token);
+}
+return tokens;
+// ...
+```
