@@ -1033,3 +1033,37 @@ Finally, it returns the `nodes` array.
 return nodes;
 // ...
 ```
+
+## Context-free grammar
+
+Note that:
+
+- a star `*` means zero or more repetitions of the preceding element.
+- a plus `+` means one or more repetitions of the preceding element.
+- a verticle bar `|` means only one of the elements can be present.
+- element enclosed by square brackets `[]` is optional.
+- characters enclosed by single quotes `'` is a literal.
+
+```bnf
+<diagram> ::= <statement>*
+
+<statement> ::= <token>+ ';'
+            |   <for-statement>
+            |   <while-statement>
+            |   <do-while-statement>
+            |   <if-statement>
+
+<for-statement> ::= 'for' '(' <token>* ')' '{' <statement>* '}'
+
+<while-statement> ::= 'while' '(' <token>* ')' '{' <statement>* '}'
+
+<do-while-statement> ::= 'do' '{' <statement>* '}' 'while' '(' <token>* ')' ';'
+
+<if-statement> ::= 'if' '(' <token>* ')' '{' <statement>* '}' ['else' '{'<statement>* '}']
+
+<token> ::= <any-character>+
+
+<any-character> ::= <letter>
+                |   <digits>
+                |   <non-whitespace-character>
+```

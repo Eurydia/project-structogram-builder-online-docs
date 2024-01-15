@@ -5,9 +5,12 @@ It converts a piece of code into a [Nassi-Shneiderman diagram](https://en.wikipe
 
 The working version has been deployed at [https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/](https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/), so do give it a look if you are interested.
 
-## Syntax
+## Learn more
 
-This project uses a special [pseudocode](https://en.wikipedia.org/wiki/Pseudocode), which I have constructed from scratch.
-The syantax draws heavy inspiration from the syntax of the [C programming language](<https://en.wikipedia.org/wiki/C_(programming_language)>).
+Learn more about the project by reading the following sections:
 
-Users are encouraged to visit the [Syntax](./02-syntax.md) section for more information.
+- [Motivation](./01-motivation.md)
+- [Syntax](./02-syntax.md)
+- [Examples](./03-examples.md)
+
+If you have any other questions, feel free to contact me at.

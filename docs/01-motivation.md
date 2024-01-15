@@ -2,14 +2,14 @@
 
 I wanted to develop a diagramming tool which build a [Nassi–Shneiderman diagram](https://en.wikipedia.org/wiki/Nassi%E2%80%93Shneiderman_diagram) from a piece of code.
 
-## Syntax
+## Mission
 
 I want to construct a new language for the project, but I think it is more appropriate to say "pseudocode".
 
 This pseudocode has to be permissive and flexible to accommodate for the nature of Nassi–Shneiderman diagrams.
 It has to be easy to learn and easy to use.
 
-## Features
+## Goal
 
 There are a few features that I want to make sure the project has.
 

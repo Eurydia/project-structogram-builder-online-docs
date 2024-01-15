@@ -93,39 +93,3 @@ Texts enclosed by a pair of curly braces `{...}` belong to the "body" component.
 Optionally, you can convert an if block into an if-else block by including an else block.
 
 <iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=if+%28condition%29+%7B%0A++process%3B%0A%7D+else+%7B%0A++another+process%3B%0A%7D"></iframe>
-
-## Context-free grammar
-
-For those of you who are interested, here is the context-free grammar of the constructed language.
-
-Note that:
-
-- a star `*` means zero or more repetitions of the preceding element.
-- a plus `+` means one or more repetitions of the preceding element.
-- a verticle bar `|` means only one of the elements can be present.
-- element enclosed by square brackets `[]` is optional.
-- characters enclosed by single quotes `'` is a literal.
-
-```bnf
-<diagram> ::= <statement>*
-
-<statement> ::= <token>+ ';'
-            |   <for-statement>
-            |   <while-statement>
-            |   <do-while-statement>
-            |   <if-statement>
-
-<for-statement> ::= 'for' '(' <token>* ')' '{' <statement>* '}'
-
-<while-statement> ::= 'while' '(' <token>* ')' '{' <statement>* '}'
-
-<do-while-statement> ::= 'do' '{' <statement>* '}' 'while' '(' <token>* ')' ';'
-
-<if-statement> ::= 'if' '(' <token>* ')' '{' <statement>* '}' ['else' '{'<statement>* '}']
-
-<token> ::= <any-character>+
-
-<any-character> ::= <letter>
-                |   <digits>
-                |   <non-whitespace-character>
-```
