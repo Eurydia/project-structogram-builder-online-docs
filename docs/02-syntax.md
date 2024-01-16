@@ -6,7 +6,7 @@ I designed the langauge to be permissive and mimicked its syntax after the [C pr
 I expect users who are experienced with coding should have no issue with the project.
 As for users with less experience, I hope to provide a risk-free playground to experiment.
 
-At the time of writing, the project supports [process blocks](#process-block), [testing loops](#testing-loop), [branching blocks](#branching-block), and [functions](#function-blocks).
+At the time of writing, the project supports [process blocks](#process-block), [testing loops](#testing-loop), [branching blocks](#branching-block), and [functions](#function).
 
 There are multiple interactive examples on this section.
 On smaller devices, live preview is shown by default.
@@ -83,8 +83,6 @@ The property of the double dots can be confusing, so we can also write a descrip
 
 ### Test-last loops
 
-Generally, test-last loop blocks supports everything that [test-first loop blocks](#test-first-loop-block) support.
-
 <iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=do+%7B%0A++process%3B%0A%7D+while+%28condition%29%3B"></iframe>
 
 Here is an example with nested test-last loops.
@@ -93,12 +91,44 @@ Here is an example with nested test-last loops.
 
 ## Branching block
 
-If blocks have two components.
-Texts enclosed by a pair of parentheses `(...)` belong to the "condition" component.
-Texts enclosed by a pair of curly braces `{...}` belong to the "body" component.
+From [Wikipedia](https://en.wikipedia.org/wiki/Nassi%E2%80%93Shneiderman_diagram#Diagrams):
+
+> "The simple True/False or Yes/No branching block which offers the program two paths to take depending on whether or not a condition has been fulfilled."
+
+Branching blocks have two components.
+Elements enclosed by a pair of parentheses `(...)` belong to the "condition" component.
+Elements enclosed by a pair of curly braces `{...}` belong to the "body" component.
 
 <iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=if+%28condition%29+%7B%0A++process%3B%0A%7D"></iframe>
 
-Optionally, you can convert an if block into an if-else block by including an else block.
+To access the other path, use "else" keyword.
 
 <iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=if+%28condition%29+%7B%0A++process%3B%0A%7D+else+%7B%0A++another+process%3B%0A%7D"></iframe>
+
+## Function
+
+Functions and procedures have four components.
+
+The first element represents the [return type](https://en.wikipedia.org/wiki/Return_type).
+It is required, even for procedures.
+
+The second element represents the name of the function or procedure.
+
+Elements enclosed by a pair of parentheses `(...)` belong to the "Parameter" component.
+They are copied from the code and pasted on the diagram.
+
+Elements enclosed by a pair of curly braces `(...)` belong to the "body" component.
+
+<iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=integer+func%28integer+n%29+%7B%0A+something%3B%0A%7D"></iframe>
+
+A procedure is conveyed with a few methods, but I found "void" to be the most elegant.
+
+<iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=void+proc%28integer+n%29+%7B%0A+something%3B%0A%7D"></iframe>
+
+## Comment
+
+Comments are invoked with two forward slashes "//", similar to the C-programming language, the entire line is excluded from the diagram.
+
+When sharing diagram through links, comments are preserved.
+
+<iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=%2F%2F+The+three+hardest+things+for+people+to+say%3A%0A%2F%2F+I+was+wrong%0A%2F%2F+I+am+sorry%0A%2F%2F+W-worches%2C+w-wirhest%2C+um...+Wooster-shire+sauce%0A%0AI+have+a+hidden+message%3B%0A%0A"></iframe>

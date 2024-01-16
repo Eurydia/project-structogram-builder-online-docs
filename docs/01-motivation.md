@@ -20,17 +20,13 @@ At the end of the course, it was clear that students needed an alternative metho
 
 > "Mermaid for Nassi–Shneiderman diagrams."
 
-[MermaidJS](https://mermaid.js.org/), or Mermaid is a [JavaScript](https://developer.mozilla.org/en-US/docs/Web/javascript) library.
-It is well-known in the frontend web development community as a robust tool for building diagrams and charts from a piece of code.
-
-In a sense, I planned for this project to take a similar approach.
-It would take a piece of code and generate a diagram.
+[MermaidJS](https://mermaid.js.org/) is a [JavaScript](https://developer.mozilla.org/en-US/docs/Web/javascript) library.
+It is well-known in the frontend web development community as a robust tool for building diagrams and charts dynanimcally.
+This project take the same approach by building a diagram from a piece of code.
 
 ## Scopes and goals
 
-Apart from building diagrams, I wanted to implement additional quality-of-life features.
-These features are not meant to be ground-breaking, but something that users have come to expect.
-
+Apart from building diagrams, the project needs additional quality-of-life features.
 Namely,
 
 - it should work on any device,
