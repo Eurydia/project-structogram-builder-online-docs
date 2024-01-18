@@ -5,12 +5,12 @@ It converts a piece of code into a [Nassi-Shneiderman diagram](https://en.wikipe
 
 The live editor is available on [https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/](https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/).
 
-## Learn more
+## Contacts
 
-Learn more about the project by reading the following sections:
+At the time of writing, I made sure to include every details and nuances about the project, but it is entirely possible that I forgot a small details.
 
-- [Motivation](./01-motivation.md)
-- [Syntax](./02-syntax.md)
-- [Examples](./03-examples.md)
+If there is something that was not covered, contact me on:
 
-If you have any other questions, feel free to contact me at.
+- LinkedIn: https://www.linkedin.com/in/thanakorn-phuttharaksa-120b361a1/
+- Email: B9XP3X@inf.elte.hu
+- GitHub: https://github.com/eurydia

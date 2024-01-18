@@ -6,11 +6,9 @@ I designed the langauge to be permissive and mimicked its syntax after the [C pr
 I expect users who are experienced with coding should have no issue with the project.
 As for users with less experience, I hope to provide a risk-free playground to experiment.
 
-At the time of writing, the project supports [process blocks](#process-block), [testing loops](#testing-loop), [branching blocks](#branching-block), and [functions](#function).
+At the time of writing, the project supports [process blocks](#process-block), [testing loops](#testing-loop), [branching blocks](#branching-block), [functions](#function), and [comments](#comment).
 
-There are multiple interactive examples on this section.
-On smaller devices, live preview is shown by default.
-Press "Show code" to hide the preview.
+There are multiple interactive examples on this section, but live preview is shown by default, so press "Show code" to hide the preview.
 
 ## Process block
 
@@ -29,7 +27,7 @@ The project does not enforce a particular style, but if you are an ELTE student,
 
 <iframe width="100%" style="aspect-ratio: 16/9; border:none;" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=x+%3A%3D+0%3B"></iframe>
 
-I have seen some Wikipedia articles, for example, an article on [Insertion sort](https://en.wikipedia.org/wiki/Insertion_sort#Algorithm), uses the `<-` operator.
+I have seen some Wikipedia articles, for example, an article on [Insertion sort](https://en.wikipedia.org/wiki/Insertion_sort#Algorithm), uses the "<-" operator.
 
 <iframe width="100%" style="aspect-ratio: 16/9; border:none;" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=x+%3C-+0%3B"></iframe>
 
@@ -50,10 +48,10 @@ In test-first loops, the condition is tested before the processes, while in test
 
 Both testing loops have two components.
 
-Elements enclosed by a pair of parentheses `(...)` belong to the "condition" component.
+Elements enclosed by a pair of parentheses "(...)" belong to the "condition" component.
 Such elements are copied from the code and pasted onto the diagram.
 
-Elements enclosed by a pair of curly braces `{...}` belong to the "body" component.
+Elements enclosed by a pair of curly braces "{...}" belong to the "body" component.
 
 ### Test-first loop
 
@@ -73,7 +71,7 @@ If you are an ELTE student, you might want to use the following syntax.
 
 <iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=for+%28i+%3D+1..10%29+%7B%0A++...%3B%0A%7D"></iframe>
 
-Some pseudocode uses `<-` to signifies each iteration.
+Some pseudocode uses "<-" to signifies each iteration.
 
 <iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=for+%28i+%3C-+1..10%29+%7B%0A++...%3B%0A%7D"></iframe>
 
@@ -96,8 +94,8 @@ From [Wikipedia](https://en.wikipedia.org/wiki/Nassi%E2%80%93Shneiderman_diagram
 > "The simple True/False or Yes/No branching block which offers the program two paths to take depending on whether or not a condition has been fulfilled."
 
 Branching blocks have two components.
-Elements enclosed by a pair of parentheses `(...)` belong to the "condition" component.
-Elements enclosed by a pair of curly braces `{...}` belong to the "body" component.
+Elements enclosed by a pair of parentheses "(...)" belong to the "condition" component.
+Elements enclosed by a pair of curly braces "{...}" belong to the "body" component.
 
 <iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=if+%28condition%29+%7B%0A++process%3B%0A%7D"></iframe>
 
@@ -114,10 +112,10 @@ It is required, even for procedures.
 
 The second element represents the name of the function or procedure.
 
-Elements enclosed by a pair of parentheses `(...)` belong to the "Parameter" component.
+Elements enclosed by a pair of parentheses "(...)" belong to the "Parameter" component.
 They are copied from the code and pasted on the diagram.
 
-Elements enclosed by a pair of curly braces `(...)` belong to the "body" component.
+Elements enclosed by a pair of curly braces "{...}" belong to the "body" component.
 
 <iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=integer+func%28integer+n%29+%7B%0A+something%3B%0A%7D"></iframe>
 
