@@ -1,4 +1,4 @@
-# Syntax
+# Getting started
 
 Much like [Mermaid](https://mermaid.js.org/), the project uses a special scripting language.
 
