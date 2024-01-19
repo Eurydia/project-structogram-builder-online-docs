@@ -1,33 +1,33 @@
 # Background and motivation
 
-During the first year of Computer Science degree at ELTE, I was completing a basic programming course, which featured [Nassi–Shneiderman diagrams](https://en.wikipedia.org/wiki/Nassi%E2%80%93Shneiderman_diagram) in the course materials and assignments.
-Since Nassi–Shneiderman diagrams are not dependent of programming languages, it was a reasonable introduction to programming much like [pseudocode](https://en.wikipedia.org/wiki/Pseudocode) or [flowcharts](https://en.wikipedia.org/wiki/Flowchart).
+During my first year in the Computer Science program at ELTE, I completed a fundamental programming course that incorporated [Nassi–Shneiderman diagrams](https://en.wikipedia.org/wiki/Nassi%E2%80%93Shneiderman_diagram) in the coursework.
+As these diagrams are programming language-agnostic, they served as a practical introduction to programming, comparable to the utility of [pseudocode](https://en.wikipedia.org/wiki/Pseudocode) or [flowcharts](https://en.wikipedia.org/wiki/Flowchart).
 
-Unfortunately, I found out early on that there was not an easy way to draw a Nassi–Shneiderman diagram online, or elsewhere.
-The course instructor and demonstrators did briefly introduced students to a diagramming tool called "Structorizer", but it was rather cumbersome to learn and difficult to use.
+Unfortunately, I discovered early on that there was no straightforward method available for creating Nassi–Shneiderman diagrams online or elsewhere.
+While the course briefly introduced a tool named "Structorizer," it proved to be cumbersome and challenging for students to learn and use effectively.
 
-Some of my coursemates perservered and used Structorizer regardless,
-some resorted to graphic design tools like [Figma](https://www.figma.com/), and some went as far as drawing a diagram on a piece of paper and taking a picture of it.
+Various approaches were adopted by my peers to address this challenge.
+Some persevered with Structorizer, while others turned to graphic design tools such as [Figma](https://www.figma.com/).
+Some even resorted to hand-drawing diagrams on paper and capturing them with a camera.
 
-As for myself, I built a [React](https://react.dev/) component library, whose source code is available on [GitHub](https://github.com/Eurydia/project-nassi-shneiderman-diagram-builder), and used it to build diagrams
+In my case, I proactively addressed the challenge by developing a [React](https://react.dev/) [UI component library](https://github.com/Eurydia/project-nassi-shneiderman-diagram-builder) to construct diagrams, initially meant for my personal use. As my proficiency in diagram creation became evident, several of my peers approached me for assistance, highlighting a clear need for a more accessible and user-friendly alternative.
 
-At the end of the course, it was clear that students needed an alternative method of building a diagram, so I took inititive and create this project.
+Recognizing the inefficiency of personally creating diagrams for others on an individual basis, I keenly observed the widespread need for a more accessible and user-friendly alternative.
+This realization became the driving force behind taking the initiative to create this project.
 
 ## Mission statement
 
-> "Mermaid for Nassi–Shneiderman diagrams."
+> "MermaidJS for Nassi–Shneiderman diagrams."
 
-[MermaidJS](https://mermaid.js.org/) is a [JavaScript](https://developer.mozilla.org/en-US/docs/Web/javascript) library.
-It is well-known in the frontend web development community as a robust tool for building diagrams and charts dynamically.
-This project take the same approach by building a diagram from a piece of code.
+[MermaidJS](https://mermaid.js.org/) is a well-established [JavaScript](https://developer.mozilla.org/en-US/docs/Web/javascript) library in the frontend web development community which excels at dynamically constructing diagrams and charts.
+This project adopts a similar methodology to create Nassi–Shneiderman diagrams from code snippets.
 
 ## Scopes and goals
 
-Apart from building diagrams, the project needs additional quality-of-life features.
-Namely,
+In addition to the core functionality of diagram creation, the project encompasses several much-needed features:
 
-- it should work on any device,
-- it should provide a way to share and export the diagram,
-- it should automatically save the progress,
-- it is online and responsive,
-- it is easy to learn and easy to use.
+- **Device Compatibility**: Ensuring seamless functionality across various devices.
+- **Diagram Sharing and Export**: Facilitating the easy sharing and exportation of created diagrams.
+- **Auto-Save Functionality**: Implementing an automatic progress-saving mechanism.
+- **Online Accessibility and Responsiveness**: Enabling online access with a responsive design for user-friendly interaction.
+- **User-Friendly Design**: Prioritizing an intuitive and easily comprehensible interface to enhance the learning curve and overall usability of the platform.

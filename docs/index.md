@@ -2,7 +2,7 @@
 
 A [Nassi-Shneiderman diagram](https://en.wikipedia.org/wiki/Nassi%E2%80%93Shneiderman_diagram), also known as a structogram, is a graphical representation outlining the sequential steps and control flows of a computer program, offering a visual guide for programmers.
 
-The project streamlines the coding process by transforming a piece of code into such a diagram, facilitating easier understanding and collaboration.
+This project streamlines the coding process by transforming a piece of code into such a diagram, facilitating easier creation.
 The resulting diagram can be exported as an image or shared through a link using the live editor available at [https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/](https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/).
 
 ## Contacts
