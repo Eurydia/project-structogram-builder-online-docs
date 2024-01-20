@@ -5,8 +5,6 @@ It is not a tutorial on how to use the project, but rather a showcase of what th
 
 ## Variable assignment
 
-In a [Nassi–Shneiderman diagram](https://en.wikipedia.org/wiki/Nassi%E2%80%93Shneiderman_diagram), variable assignment is a process.
-
 The [origial paper](https://www.cs.umd.edu/hcil/members/bshneiderman/nsd/Yoder-Schrag-nassi_schart.pdf) uses textual description to explain that a variable is initialized or assigned to.
 
 <iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=Set+%22var%22+to+%221%22%3B"></iframe>
