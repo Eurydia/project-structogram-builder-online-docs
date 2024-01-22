@@ -25,7 +25,7 @@ A process can contain any number of words and symbols, but it must contain at le
 
 From Wikipedia's article on Nassi–Shneiderman diagram:
 
-> "The loop allows the program to loop one or a set of processes until a particular condition is fulfilled.
+> "The loop allows the program to loop one or a set of processes until a particular condition is fulfilled."
 
 The project supports two types of loops: test-first loops and test-last loops, each differing in the sequence of executed steps.
 
