@@ -18,10 +18,10 @@ If you find it hidden, simply tap on the "SHOW CODE" button to reveal it.
 
 Now, let's create a simple diagram.
 
-In the code editor, type Hello World;
+In the code editor, type `Hello World!;`.
 The project should generate the corresponding diagram:
 
-<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=Hello+World%3B"></iframe>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=Hello+World%21%3B"></iframe>
 
 ## 4. Export
 

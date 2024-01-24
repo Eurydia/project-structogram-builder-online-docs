@@ -35,20 +35,20 @@ The project supports two types of loops: test-first loops and test-last loops, e
 Both types of loops consist of two components:
 
 - **Condition Component**: Enclosed within parentheses, this component comprises elements directly derived from the code, and pasted onto the diagram.
-- **Body Component**: Enclosed within curly braces, this component defines the actions to be iteratively performed.
+- **Body Component**: Enclosed within curly braces, this component defines the processes to be iteratively performed.
 
 ### For loop
 
-<iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=for+%28condition%29+%7B%0A++body%3B%0A%7D"></iframe>
+<iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=for+%28Condition%29+%7B%0A++Hello+World%21%3B%0A%7D"></iframe>
 
 Additionally, it's worth noting that a test-first loop can be invoked with either "for" or "while."
 The project generates the same diagram for both variations, making no distinction between the keywords.
 
-<iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=while+%28condition%29+%7B%0A++body%3B%0A%7D"></iframe>
+<iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=while+%28Condition%29+%7B%0A+++Hello+World%21%3B%0A%7D"></iframe>
 
 ### Do-while loop
 
-<iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=do+%7B%0A++body%3B%0A%7D+while+%28condition%29%3B"></iframe>
+<iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=do+%7B%0A+++Hello+World%21%3B%0A%7D+while+%28Condition%29%3B"></iframe>
 
 ## If-else block
 
@@ -59,13 +59,13 @@ From Wikipedia's article on Nassi–Shneiderman diagram:
 If-else blocks consist of two components:
 
 - **Condition Component**: Enclosed within parentheses, this component comprises elements directly derived from the code, and pasted onto the diagram.
-- **Body Component**: Enclosed within curly braces, this component defines the actions to be performed when the condition is fulfilled.
+- **Body Component**: Enclosed within curly braces, this component defines the processes to be performed when the condition is fulfilled.
 
-<iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=if+%28condition%29+%7B%0A++body%3B%0A%7D"></iframe>
+<iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=if+%28Condition%29+%7B%0A++Hello+World%21%3B%0A%7D"></iframe>
 
 The "else" keyword is used to access the other branch.
 
-<iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=if+%28condition%29+%7B%0A++body%3B%0A%7D+else+%7B%0A++another+body%3B%0A%7D"></iframe>
+<iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=if+%28Condition%29+%7B%0A++Hello+World%21%3B%0A%7D+else+%7B%0A++Hello+Space%21%3B%0A%7D"></iframe>
 
 ## Function
 
@@ -77,9 +77,9 @@ Functions and procedures within the project are characterized by four essential 
 - **Return Type Element**: The first element denotes the return type, a mandatory specification even for procedures.
 - **Name Element**: The second element designates the name of the function or procedure.
 - **Parameter Component**: Enclosed within parentheses, this component comprises elements directly derived from the code, faithfully pasted onto the diagram.
-- **Body Component**: Enclosed within curly braces, this component encapsulates the procedural elements of the function or procedure, defining the actions to be executed.
+- **Body Component**: Enclosed within curly braces, this component encapsulates the procedural elements of the function or procedure, defining the processes to be executed.
 
-<iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=return_type+name%28parameters%29+%7B%0A+body%3B%0A%7D"></iframe>
+<iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=Return_type+Name%28Parameters%29+%7B%0A+Hello+World%21%3B%0A%7D"></iframe>
 
 ## Comment
 
