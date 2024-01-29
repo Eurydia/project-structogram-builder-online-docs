@@ -6,6 +6,8 @@ The project delivers a comprehensive syntax for various programming constructs, 
 
 It's worth noting that two structures from the [orignal diagram design](https://www.cs.umd.edu/hcil/members/bshneiderman/nsd/Yoder-Schrag-nassi_schart.pdf) are currently not supported: parallel blocks and switch blocks, the latter being if-else blocks with more than two branches.
 
+> The examples are fully interactive, so do feel free to play around and experiment with them.
+
 ## Process
 
 From [Wikipedia's article on Nassi–Shneiderman diagram](https://en.wikipedia.org/wiki/Nassi%E2%80%93Shneiderman_diagram):
@@ -15,7 +17,7 @@ From [Wikipedia's article on Nassi–Shneiderman diagram](https://en.wikipedia.o
 
 A process is a sequence of words and symbols separated by spaces and terminates by a semicolon.
 
-<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=Hello+World%21"></iframe>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=Hello+World%21%3B"></iframe>
 
 A process can contain any number of words and symbols, but it must contain at least one word or symbol.
 
