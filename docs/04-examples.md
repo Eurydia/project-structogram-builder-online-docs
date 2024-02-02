@@ -14,15 +14,15 @@ The label can then be utilized in the code to perform operations, make decisions
 
 Textual description:
 
-<iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=Set+%22var%22+to+%221%22%3B"></iframe>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=Set+%22var%22+to+%221%22%3B"></iframe>
 
 [Pseudocode](https://en.wikipedia.org/wiki/Pseudocode#Common_mathematical_symbols) style using ":=" symbol:
 
-<iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=var+%3A%3D+1%3B"></iframe>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=var+%3A%3D+1%3B"></iframe>
 
 [Pseudocode](https://en.wikipedia.org/wiki/Pseudocode#Common_mathematical_symbols) style using "<-" symbol:
 
-<iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=var+%3C-+1%3B"></iframe>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=var+%3C-+1%3B"></iframe>
 
 ## Type annotation
 
@@ -34,33 +34,47 @@ It is similar to informing the system that a variable is meant to store numbers,
 
 Textual description:
 
-<iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=Set+%22var%22+of+type+%22Integer%22+to+%221%22%3B"></iframe>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=Set+%22var%22+of+type+%22Integer%22+to+%221%22%3B"></iframe>
 
 [C programming language](https://en.wikipedia.org/wiki/The_C_Programming_Language) style:
 
-<iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=Integer+var+%3A%3D+1%3B"></iframe>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=Integer+var+%3A%3D+1%3B"></iframe>
 
 [Python](https://docs.python.org/3/library/typing.html) style:
 
-<iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=var%3A+Integer+%3A%3D+1%3B"></iframe>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=var%3A+Integer+%3A%3D+1%3B"></iframe>
 
 ## Loop
 
-> Loops are a construct that allows a program to repeat a set of processes or operations until a particular condition is met.
-> They enhance the efficiency and flexibility of code, enabling the automation of repetitive tasks.
-
-The loop concept involves two main types, both types provide a mechanism for controlled repetition, contributing to the structured flow of a program:
-
-- **Test-First Loops**: The condition is checked before executing the processes.
-- **Test-Last Loops**: The condition is assessed after the processes have run.
-
 Textual Description (Test-first loop):
 
-<iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=for+%28Repeat+until+%22condition%22%29+%7B%0A++processes%3B%0A%7D"></iframe>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=for+%28Repeat+until+%22condition%22%29+%7B%0A++processes%3B%0A%7D"></iframe>
 
 Pseudocode style (Test-first loop):
 
-<iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=for+%28i+%3D+%22something%22+TO+%22something+else%22%29+%7B%0A++processes%3B%0A%7D"></iframe>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=for+%28i+%3D+%22something%22+TO+%22something+else%22%29+%7B%0A++processes%3B%0A%7D"></iframe>
+
+Python style:
+
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=for+%28EACH+item+IN+container%29+%7B%7D"></iframe>
+
+C style:
+
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=for+%28i+%3A%3D+FROM+a+TO+b+STEP+c%29+%7B%7D"></iframe>
+
+## Functions
+
+Python style:
+
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=def+sum%28a%3A+Integer%2C+b%3A+Integer%29%3A+Integer+%7B%7D"></iframe>
+
+C style:
+
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=Integer+sum%28Integer+a%2C+Integer+b%29+%7B%7D"></iframe>
+
+[Bash](https://www.gnu.org/software/bash/) style:
+
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=sum+%7B%7D"></iframe>
 
 ## Sequence calculation
 
@@ -68,7 +82,7 @@ Sequence calculation is a pattern of algorithm which reduces a sequence of eleme
 
 Sequence calculation on integers using addition:
 
-<iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=_+Summation%28Integer%5B1..%5D+sequence%29+%7B%0A++Integer+result+%3A%3D+sequence%5B1%5D%3B%0A++for+%28i+%3D+2..length%28sequence%29%29+%7B%0A++++result+%3A%3D+result+%2B+sequence%5Bi%5D%3B%0A++%7D%0A%7D"></iframe>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=_+Summation%28Integer%5B1..%5D+sequence%29+%7B%0A++Integer+result+%3A%3D+sequence%5B1%5D%3B%0A++for+%28i+%3D+2..length%28sequence%29%29+%7B%0A++++result+%3A%3D+result+%2B+sequence%5Bi%5D%3B%0A++%7D%0A%7D"></iframe>
 
 ## Counting
 
@@ -77,7 +91,7 @@ It looks at every element in a sequence and see how many of those elements have 
 
 Counting the number of primes numbers in an interval:
 
-<iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=_+Counting%28Integer+start%2C+Integer+end%29+%7B%0A++Integer+count+%3A%3D+0%3B%0A++for+%28i+%3D+start..end%29+%7B%0A++++if+%28isPrime%28i%29%29+%7B%0A++++++count+%3A%3D+count+%2B+1%3B%0A++++%7D%0A++%7D%0A%7D"></iframe>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=_+Counting%28Integer+start%2C+Integer+end%29+%7B%0A++Integer+count+%3A%3D+0%3B%0A++for+%28i+%3D+start..end%29+%7B%0A++++if+%28isPrime%28i%29%29+%7B%0A++++++count+%3A%3D+count+%2B+1%3B%0A++++%7D%0A++%7D%0A%7D"></iframe>
 
 ## Maximum selection and minimum selection
 
@@ -87,11 +101,11 @@ This element is either the "maximum" or the "minimum" element of the sequence.
 
 Maximum selection on integers:
 
-<iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=_+MaximumSelection%28Integer%5B1..%5D+sequence%29+%7B%0A++Integer+result+%3A%3D+sequence%5B1%5D%3B%0A++for+%28i+%3D+2..length%28sequence%29%29+%7B%0A++++if+%28sequence%5Bi%5D+%3E+result%29+%7B%0A++++++result+%3A%3D+sequence%5Bi%5D%3B%0A++++%7D%0A++%7D%0A%7D"></iframe>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=_+MaximumSelection%28Integer%5B1..%5D+sequence%29+%7B%0A++Integer+result+%3A%3D+sequence%5B1%5D%3B%0A++for+%28i+%3D+2..length%28sequence%29%29+%7B%0A++++if+%28sequence%5Bi%5D+%3E+result%29+%7B%0A++++++result+%3A%3D+sequence%5Bi%5D%3B%0A++++%7D%0A++%7D%0A%7D"></iframe>
 
 Minimum selection on integers:
 
-<iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=_+MinimumSelection%28Integer%5B1..%5D+sequence%29+%7B%0A++Integer+result+%3A%3D+sequence%5B1%5D%3B%0A++for+%28i+%3D+2..length%28sequence%29%29+%7B%0A++++if+%28sequence%5Bi%5D+%3C+result%29+%7B%0A++++++result+%3A%3D+sequence%5Bi%5D%3B%0A++++%7D%0A++%7D%0A%7D"></iframe>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=_+MinimumSelection%28Integer%5B1..%5D+sequence%29+%7B%0A++Integer+result+%3A%3D+sequence%5B1%5D%3B%0A++for+%28i+%3D+2..length%28sequence%29%29+%7B%0A++++if+%28sequence%5Bi%5D+%3C+result%29+%7B%0A++++++result+%3A%3D+sequence%5Bi%5D%3B%0A++++%7D%0A++%7D%0A%7D"></iframe>
 
 ## Search
 
@@ -101,7 +115,7 @@ However, such an element might not exist in the sequence.
 
 Searching for a prime number in a sequence of integers, defaults to "-1" when the sequence does not contain a prime number:
 
-<iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=_+Search%28Integer%5B1..%5D+sequence%29+%7B%0A++Integer+result+%3A%3D+-1%3B%0A++for+%28i+%3D+1..length%28sequence%29%29+%7B%0A++++if+%28isPrime%28sequence%5Bi%5D%29%29+%7B%0A++++++result+%3A%3D+sequence%5Bi%5D%3B%0A++++%7D%0A++%7D%0A%7D"></iframe>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=_+Search%28Integer%5B1..%5D+sequence%29+%7B%0A++Integer+result+%3A%3D+-1%3B%0A++for+%28i+%3D+1..length%28sequence%29%29+%7B%0A++++if+%28isPrime%28sequence%5Bi%5D%29%29+%7B%0A++++++result+%3A%3D+sequence%5Bi%5D%3B%0A++++%7D%0A++%7D%0A%7D"></iframe>
 
 ## Selection
 
@@ -110,7 +124,7 @@ Unlike Search, at least one such element exists.
 
 Selecting the last prime number in a sequence of integers:
 
-<iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=_+Select%28Integer%5B1..%5D+sequence%29+%7B%0A++Integer+result+%3A%3D+sequence%5B1%5D%3B%0A++for+%28i+%3D+2..length%28sequence%29%29+%7B%0A++++if+%28isPrime%28sequence%5Bi%5D%29%29+%7B%0A++++++result+%3A%3D+sequence%5Bi%5D%3B%0A++++%7D%0A++%7D%0A%7D"></iframe>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=_+Select%28Integer%5B1..%5D+sequence%29+%7B%0A++Integer+result+%3A%3D+sequence%5B1%5D%3B%0A++for+%28i+%3D+2..length%28sequence%29%29+%7B%0A++++if+%28isPrime%28sequence%5Bi%5D%29%29+%7B%0A++++++result+%3A%3D+sequence%5Bi%5D%3B%0A++++%7D%0A++%7D%0A%7D"></iframe>
 
 ## Decision
 
@@ -119,4 +133,4 @@ If an element in a sequence satisfies a certain property, it resolves to true, a
 
 Decide whether a sequence of integers contains a prime number or not:
 
-<iframe width="100%" style="aspect-ratio: 16/9; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=_+Decision%28Integer%5B1..%5D+sequence%29+%7B%0A++Boolean+result+%3A%3D+NO%3B%0A++for+%28i+%3D+2..length%28sequence%29%29+%7B%0A++++if+%28isPrime%28sequence%5Bi%5D%29%29+%7B%0A++++++result+%3A%3D+YES%3B%0A++++%7D%0A++%7D%0A%7D"></iframe>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=_+Decision%28Integer%5B1..%5D+sequence%29+%7B%0A++Boolean+result+%3A%3D+NO%3B%0A++for+%28i+%3D+2..length%28sequence%29%29+%7B%0A++++if+%28isPrime%28sequence%5Bi%5D%29%29+%7B%0A++++++result+%3A%3D+YES%3B%0A++++%7D%0A++%7D%0A%7D"></iframe>

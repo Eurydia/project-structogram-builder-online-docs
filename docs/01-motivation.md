@@ -10,9 +10,10 @@ Various approaches were adopted by my peers to address this challenge.
 Some persevered with Structorizer, while others turned to graphic design tools such as [Figma](https://www.figma.com/).
 Some even resorted to hand-drawing diagrams on paper and capturing them with a camera.
 
-In my case, I proactively addressed the challenge by developing a [React](https://react.dev/) [UI component library](https://github.com/Eurydia/project-nassi-shneiderman-diagram-builder) to construct diagrams, initially meant for my personal use. As my proficiency in diagram creation became evident, several of my peers approached me for assistance, highlighting a clear need for a more accessible and user-friendly alternative.
+In my case, I proactively addressed the challenge by developing a [React](https://react.dev/) [UI component library](https://github.com/Eurydia/project-nassi-shneiderman-diagram-builder) to construct diagrams, initially meant for my personal use.
+As my proficiency in diagram creation became evident, several of my peers approached me for assistance, highlighting a clear need for a more accessible and user-friendly alternative.
 
-Recognizing the inefficiency of personally creating diagrams for others on an individual basis, I keenly observed the widespread need for a more accessible and user-friendly alternative.
+Recognizing the inefficiency of personally creating diagrams for others on an individual basis, I observed the widespread need for a more accessible and user-friendly alternative.
 This realization became the driving force behind taking the initiative to create this project.
 
 ## Mission statement
@@ -20,11 +21,11 @@ This realization became the driving force behind taking the initiative to create
 > "MermaidJS for Nassi–Shneiderman diagrams."
 
 [MermaidJS](https://mermaid.js.org/) is a well-established [JavaScript](https://developer.mozilla.org/en-US/docs/Web/javascript) library in the frontend web development community which excels at dynamically constructing diagrams and charts.
-This project adopts a similar methodology to create Nassi–Shneiderman diagrams from code snippets.
+The project adopts a similar methodology to create Nassi–Shneiderman diagrams from code snippets.
 
 ## Scopes and goals
 
-In addition to the core functionality of diagram creation, the project encompasses several much-needed features:
+In addition to the core functionality of diagram creation, the project encompasses several features:
 
 - **Device Compatibility**: Ensuring seamless functionality across various devices.
 - **Diagram Sharing and Export**: Facilitating the easy sharing and exportation of created diagrams.
