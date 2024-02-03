@@ -82,7 +82,7 @@ Sequence calculation is a pattern of algorithm which reduces a sequence of eleme
 
 Sequence calculation on integers using addition:
 
-<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=_+Summation%28Integer%5B1..%5D+sequence%29+%7B%0A++Integer+result+%3A%3D+sequence%5B1%5D%3B%0A++for+%28i+%3D+2..length%28sequence%29%29+%7B%0A++++result+%3A%3D+result+%2B+sequence%5Bi%5D%3B%0A++%7D%0A%7D"></iframe>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=Summation%28Integer%5B1..%5D+sequence%29+%7B%0A++Integer+result+%3A%3D+sequence%5B1%5D%3B%0A++for+%28i+%3D+2..length%28sequence%29%29+%7B%0A++++result+%3A%3D+result+%2B+sequence%5Bi%5D%3B%0A++%7D%0A%7D "></iframe>
 
 ## Counting
 
@@ -91,7 +91,7 @@ It looks at every element in a sequence and see how many of those elements have 
 
 Counting the number of primes numbers in an interval:
 
-<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=_+Counting%28Integer+start%2C+Integer+end%29+%7B%0A++Integer+count+%3A%3D+0%3B%0A++for+%28i+%3D+start..end%29+%7B%0A++++if+%28isPrime%28i%29%29+%7B%0A++++++count+%3A%3D+count+%2B+1%3B%0A++++%7D%0A++%7D%0A%7D"></iframe>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=Counting%28Integer+start%2C+Integer+end%29+%7B%0A++Integer+count+%3A%3D+0%3B%0A++for+%28i+%3D+start..end%29+%7B%0A++++if+%28isPrime%28i%29%29+%7B%0A++++++count+%3A%3D+count+%2B+1%3B%0A++++%7D%0A++%7D%0A%7D"></iframe>
 
 ## Maximum selection and minimum selection
 
@@ -101,11 +101,11 @@ This element is either the "maximum" or the "minimum" element of the sequence.
 
 Maximum selection on integers:
 
-<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=_+MaximumSelection%28Integer%5B1..%5D+sequence%29+%7B%0A++Integer+result+%3A%3D+sequence%5B1%5D%3B%0A++for+%28i+%3D+2..length%28sequence%29%29+%7B%0A++++if+%28sequence%5Bi%5D+%3E+result%29+%7B%0A++++++result+%3A%3D+sequence%5Bi%5D%3B%0A++++%7D%0A++%7D%0A%7D"></iframe>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=MaximumSelection%28Integer%5B1..%5D+sequence%29+%7B%0A++Integer+result+%3A%3D+sequence%5B1%5D%3B%0A++for+%28i+%3D+2..length%28sequence%29%29+%7B%0A++++if+%28sequence%5Bi%5D+%3E+result%29+%7B%0A++++++result+%3A%3D+sequence%5Bi%5D%3B%0A++++%7D%0A++%7D%0A%7D"></iframe>
 
 Minimum selection on integers:
 
-<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=_+MinimumSelection%28Integer%5B1..%5D+sequence%29+%7B%0A++Integer+result+%3A%3D+sequence%5B1%5D%3B%0A++for+%28i+%3D+2..length%28sequence%29%29+%7B%0A++++if+%28sequence%5Bi%5D+%3C+result%29+%7B%0A++++++result+%3A%3D+sequence%5Bi%5D%3B%0A++++%7D%0A++%7D%0A%7D"></iframe>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=MinimumSelection%28Integer%5B1..%5D+sequence%29+%7B%0A++Integer+result+%3A%3D+sequence%5B1%5D%3B%0A++for+%28i+%3D+2..length%28sequence%29%29+%7B%0A++++if+%28sequence%5Bi%5D+%3C+result%29+%7B%0A++++++result+%3A%3D+sequence%5Bi%5D%3B%0A++++%7D%0A++%7D%0A%7D"></iframe>
 
 ## Search
 
@@ -115,7 +115,7 @@ However, such an element might not exist in the sequence.
 
 Searching for a prime number in a sequence of integers, defaults to "-1" when the sequence does not contain a prime number:
 
-<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=_+Search%28Integer%5B1..%5D+sequence%29+%7B%0A++Integer+result+%3A%3D+-1%3B%0A++for+%28i+%3D+1..length%28sequence%29%29+%7B%0A++++if+%28isPrime%28sequence%5Bi%5D%29%29+%7B%0A++++++result+%3A%3D+sequence%5Bi%5D%3B%0A++++%7D%0A++%7D%0A%7D"></iframe>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=Search%28Integer%5B1..%5D+sequence%29+%7B%0A++Integer+result+%3A%3D+-1%3B%0A++for+%28i+%3D+1..length%28sequence%29%29+%7B%0A++++if+%28isPrime%28sequence%5Bi%5D%29%29+%7B%0A++++++result+%3A%3D+sequence%5Bi%5D%3B%0A++++%7D%0A++%7D%0A%7D"></iframe>
 
 ## Selection
 
@@ -124,7 +124,7 @@ Unlike Search, at least one such element exists.
 
 Selecting the last prime number in a sequence of integers:
 
-<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=_+Select%28Integer%5B1..%5D+sequence%29+%7B%0A++Integer+result+%3A%3D+sequence%5B1%5D%3B%0A++for+%28i+%3D+2..length%28sequence%29%29+%7B%0A++++if+%28isPrime%28sequence%5Bi%5D%29%29+%7B%0A++++++result+%3A%3D+sequence%5Bi%5D%3B%0A++++%7D%0A++%7D%0A%7D"></iframe>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=Select%28Integer%5B1..%5D+sequence%29+%7B%0A++Integer+result+%3A%3D+sequence%5B1%5D%3B%0A++for+%28i+%3D+2..length%28sequence%29%29+%7B%0A++++if+%28isPrime%28sequence%5Bi%5D%29%29+%7B%0A++++++result+%3A%3D+sequence%5Bi%5D%3B%0A++++%7D%0A++%7D%0A%7D"></iframe>
 
 ## Decision
 
@@ -133,4 +133,4 @@ If an element in a sequence satisfies a certain property, it resolves to true, a
 
 Decide whether a sequence of integers contains a prime number or not:
 
-<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=_+Decision%28Integer%5B1..%5D+sequence%29+%7B%0A++Boolean+result+%3A%3D+NO%3B%0A++for+%28i+%3D+2..length%28sequence%29%29+%7B%0A++++if+%28isPrime%28sequence%5Bi%5D%29%29+%7B%0A++++++result+%3A%3D+YES%3B%0A++++%7D%0A++%7D%0A%7D"></iframe>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=Decision%28Integer%5B1..%5D+sequence%29+%7B%0A++Boolean+result+%3A%3D+NO%3B%0A++for+%28i+%3D+2..length%28sequence%29%29+%7B%0A++++if+%28isPrime%28sequence%5Bi%5D%29%29+%7B%0A++++++result+%3A%3D+YES%3B%0A++++%7D%0A++%7D%0A%7D"></iframe>
