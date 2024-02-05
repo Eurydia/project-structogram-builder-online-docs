@@ -1,6 +1,6 @@
 # Acknowledgement
 
-**Asmara Gracia**, **Cholpon Esenalieva**, **Edmond Andre Balaj**, **S. URAIRAT**, and **Kurtis** for proofreading and pointing out inconsistencies within the documentation.
+**Asmara Gracia**, **Cholpon Esenalieva**, **Edmond Andre Balaj**, **S. Urairat**, and **Kurtis** for proofreading and pointing out inconsistencies within the documentation.
 
 **Vincze Máté** for his invaluable contribution to the development of the structorizer project.
 His enthusiasm and interest in the project served as a constant source of motivation and inspiration throughout its creation.
