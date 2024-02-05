@@ -2,9 +2,9 @@
 
 **Asmara Gracia**, **Cholpon Esenalieva**, **Edmond Andre Balaj**, **S. Urairat**, and **Kurtis** for proofreading and pointing out inconsistencies within the documentation.
 
-**Vincze Máté** for his invaluable contribution to the development of the structorizer project.
+**Vincze Máté** for his invaluable contribution to the development of the project.
 His enthusiasm and interest in the project served as a constant source of motivation and inspiration throughout its creation.
-Without his positive feedback and unwavering support, the project would not have reached its current stage.
+Without his positive feedback and unwavering support, the project would not have reached its current stage, or even complete at all.
 
 **Asel Bekbolot Kyzy** ([aselbekbolotkyzy25@gmail.com](mailto:aselbekbolotkyzy25@gmail.com)) for proofreading the documentation and providing feedback on the project, especially her opinion on the lack of comments.
 During the earlier stage of the project, I was rather hesitant to implement new features, but she pointed out that comment is a feature that most people have come to expect, and the project should support it.
