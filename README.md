@@ -1,4 +1,4 @@
-# project-nassi-shneiderman-diagram-builder-online-docs
+# NSD builder online docs
 
 This is a documentation for the "Online Nassi-Shneiderman diagram builder" that can be found at [https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/](https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/).
 
