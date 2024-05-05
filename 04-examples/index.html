@@ -1,0 +1,977 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../03-supported-syntax/">
+      
+      
+        <link rel="next" href="../05-acknowlegdement/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>Examples - NSD builder docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto Mono";--md-code-font:"IBM Plex Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#examples" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="NSD builder docs" class="md-header__button md-logo" aria-label="NSD builder docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NSD builder docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Examples
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="NSD builder docs" class="md-nav__button md-logo" aria-label="NSD builder docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    NSD builder docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-motivation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Background and motivation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-quick-start/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quick start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-supported-syntax/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Supported syntax
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Examples
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Examples
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#variable-assignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variable assignment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#type-annotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type annotation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sequence-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequence calculation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#counting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Counting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maximum-selection-and-minimum-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maximum selection and minimum selection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algorithmic-patterns-over-intervals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithmic patterns over intervals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Algorithmic patterns over intervals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#counting_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Counting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maximum-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maximum selection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditional-maximum-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditional maximum selection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selection_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linear-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linear search
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binary-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Binary search
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-acknowlegdement/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acknowledgement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#variable-assignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variable assignment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#type-annotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type annotation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sequence-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequence calculation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#counting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Counting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maximum-selection-and-minimum-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maximum selection and minimum selection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algorithmic-patterns-over-intervals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithmic patterns over intervals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Algorithmic patterns over intervals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#counting_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Counting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maximum-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maximum selection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditional-maximum-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditional maximum selection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selection_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linear-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linear search
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binary-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Binary search
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h1>
+<p>This section demonstrates the capabilities to draw diagrams.
+It is not a tutorial on how to use the project, but rather a showcase of what the project can do.</p>
+<h2 id="variable-assignment">Variable assignment<a class="headerlink" href="#variable-assignment" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Variable assignment is a fundamental concept that involves giving a name to a piece of data.
+It allows for storage and manipulation of information within a computer program.</p>
+</blockquote>
+<p>When a value is assigned to a variable, it is akin to instructing the system, "Remember this information by this name."
+It's like storing a number, a word, or any other data type under a chosen label.
+The label can then be utilized in the code to perform operations, make decisions, or simply reference that piece of data.</p>
+<p>Textual description:</p>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-structogram-builder-online/?preview=true&content=Set+%22var%22+to+%221%22%3B"></iframe>
+
+<p><a href="https://en.wikipedia.org/wiki/Pseudocode#Common_mathematical_symbols">Pseudocode</a> style using ":=" symbol:</p>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-structogram-builder-online/?preview=true&content=var+%3A%3D+1%3B"></iframe>
+
+<p><a href="https://en.wikipedia.org/wiki/Pseudocode#Common_mathematical_symbols">Pseudocode</a> style using "&lt;-" symbol:</p>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-structogram-builder-online/?preview=true&content=var+%3C-+1%3B"></iframe>
+
+<h2 id="type-annotation">Type annotation<a class="headerlink" href="#type-annotation" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Type annotation is the practice of explicitly specifying the data type of a variable.
+This helps in defining the kind of information that a variable can hold, promoting code clarity and preventing potential errors.</p>
+</blockquote>
+<p>When annotating the type of a variable, additional information is provided to both programmers and the compiler or interpreter.
+It is similar to informing the system that a variable is meant to store numbers, text, or some other specific data type.</p>
+<p>Textual description:</p>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-structogram-builder-online/?preview=true&content=Set+%22var%22+of+type+%22Integer%22+to+%221%22%3B"></iframe>
+
+<p><a href="https://en.wikipedia.org/wiki/The_C_Programming_Language">C programming language</a> style:</p>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-structogram-builder-online/?preview=true&content=Integer+var+%3A%3D+1%3B"></iframe>
+
+<p><a href="https://docs.python.org/3/library/typing.html">Python</a> style:</p>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-structogram-builder-online/?preview=true&content=var%3A+Integer+%3A%3D+1%3B"></iframe>
+
+<h2 id="loop">Loop<a class="headerlink" href="#loop" title="Permanent link">&para;</a></h2>
+<p>Textual Description (Test-first loop):</p>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-structogram-builder-online/?preview=true&content=for+%28Repeat+until+%22condition%22%29+%7B%0A++processes%3B%0A%7D"></iframe>
+
+<p>Pseudocode style (Test-first loop):</p>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-structogram-builder-online/?preview=true&content=for+%28i+%3D+%22something%22+TO+%22something+else%22%29+%7B%0A++processes%3B%0A%7D"></iframe>
+
+<p>Python style:</p>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-structogram-builder-online/?preview=true&content=for+%28EACH+item+IN+container%29+%7B%7D"></iframe>
+
+<p>C style:</p>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-structogram-builder-online/?preview=true&content=for+%28i+%3A%3D+FROM+a+TO+b+STEP+c%29+%7B%7D"></iframe>
+
+<h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h2>
+<p>Python style:</p>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-structogram-builder-online/?preview=true&content=def+sum%28a%3A+Integer%2C+b%3A+Integer%29%3A+Integer+%7B%7D"></iframe>
+
+<p>C style:</p>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-structogram-builder-online/?preview=true&content=Integer+sum%28Integer+a%2C+Integer+b%29+%7B%7D"></iframe>
+
+<p><a href="https://www.gnu.org/software/bash/">Bash</a> style:</p>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-structogram-builder-online/?preview=true&content=sum+%7B%7D"></iframe>
+
+<h2 id="sequence-calculation">Sequence calculation<a class="headerlink" href="#sequence-calculation" title="Permanent link">&para;</a></h2>
+<p>Sequence calculation is a pattern of algorithm which reduces a sequence of elements to one element, which is archieved by repeated applying functions or operations to two elements and combining them into one.</p>
+<p>Sequence calculation on integers using addition:</p>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-structogram-builder-online/?preview=true&content=Summation%28Integer%5B1..%5D+sequence%29+%7B%0A++Integer+result+%3A%3D+sequence%5B1%5D%3B%0A++for+%28i+%3D+2..length%28sequence%29%29+%7B%0A++++result+%3A%3D+result+%2B+sequence%5Bi%5D%3B%0A++%7D%0A%7D "></iframe>
+
+<h2 id="counting">Counting<a class="headerlink" href="#counting" title="Permanent link">&para;</a></h2>
+<p>Counting is a pattern of algorithm which reduces a sequence of elements to a natural number.
+It looks at every element in a sequence and see how many of those elements have a certain property.</p>
+<p>Counting the number of primes numbers in an interval:</p>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-structogram-builder-online/?preview=true&content=Counting%28Integer+start%2C+Integer+end%29+%7B%0A++Integer+count+%3A%3D+0%3B%0A++for+%28i+%3D+start..end%29+%7B%0A++++if+%28isPrime%28i%29%29+%7B%0A++++++count+%3A%3D+count+%2B+1%3B%0A++++%7D%0A++%7D%0A%7D"></iframe>
+
+<h2 id="maximum-selection-and-minimum-selection">Maximum selection and minimum selection<a class="headerlink" href="#maximum-selection-and-minimum-selection" title="Permanent link">&para;</a></h2>
+<p>Maximum selection and minmium selection are a similar pattern algorithm.
+Both of them reduce a sequence of elements to one element.
+This element is either the "maximum" or the "minimum" element of the sequence.</p>
+<p>Maximum selection on integers:</p>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-structogram-builder-online/?preview=true&content=MaximumSelection%28Integer%5B1..%5D+sequence%29+%7B%0A++Integer+result+%3A%3D+sequence%5B1%5D%3B%0A++for+%28i+%3D+2..length%28sequence%29%29+%7B%0A++++if+%28sequence%5Bi%5D+%3E+result%29+%7B%0A++++++result+%3A%3D+sequence%5Bi%5D%3B%0A++++%7D%0A++%7D%0A%7D"></iframe>
+
+<p>Minimum selection on integers:</p>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-structogram-builder-online/?preview=true&content=MinimumSelection%28Integer%5B1..%5D+sequence%29+%7B%0A++Integer+result+%3A%3D+sequence%5B1%5D%3B%0A++for+%28i+%3D+2..length%28sequence%29%29+%7B%0A++++if+%28sequence%5Bi%5D+%3C+result%29+%7B%0A++++++result+%3A%3D+sequence%5Bi%5D%3B%0A++++%7D%0A++%7D%0A%7D"></iframe>
+
+<h2 id="search">Search<a class="headerlink" href="#search" title="Permanent link">&para;</a></h2>
+<p>Search is a pattern of algorithm which reduces a sequence of elements to one element.
+The element is chosen based on whether it has a certain property or not.
+However, such an element might not exist in the sequence.</p>
+<p>Searching for a prime number in a sequence of integers, defaults to "-1" when the sequence does not contain a prime number:</p>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-structogram-builder-online/?preview=true&content=Search%28Integer%5B1..%5D+sequence%29+%7B%0A++Integer+result+%3A%3D+-1%3B%0A++for+%28i+%3D+1..length%28sequence%29%29+%7B%0A++++if+%28isPrime%28sequence%5Bi%5D%29%29+%7B%0A++++++result+%3A%3D+sequence%5Bi%5D%3B%0A++++%7D%0A++%7D%0A%7D"></iframe>
+
+<h2 id="selection">Selection<a class="headerlink" href="#selection" title="Permanent link">&para;</a></h2>
+<p>Selection is a pattern of an algorithm which reduces a sequence of elements to one element.
+Unlike Search, at least one such element exists.</p>
+<p>Selecting the last prime number in a sequence of integers:</p>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-structogram-builder-online/?preview=true&content=Select%28Integer%5B1..%5D+sequence%29+%7B%0A++Integer+result+%3A%3D+sequence%5B1%5D%3B%0A++for+%28i+%3D+2..length%28sequence%29%29+%7B%0A++++if+%28isPrime%28sequence%5Bi%5D%29%29+%7B%0A++++++result+%3A%3D+sequence%5Bi%5D%3B%0A++++%7D%0A++%7D%0A%7D"></iframe>
+
+<h2 id="decision">Decision<a class="headerlink" href="#decision" title="Permanent link">&para;</a></h2>
+<p>Decision is a pattern of an algorithm which reduces a sequence of elements to a boolean value.
+If an element in a sequence satisfies a certain property, it resolves to true, and false otherwise.</p>
+<p>Decide whether a sequence of integers contains a prime number or not:</p>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-structogram-builder-online/?preview=true&content=Decision%28Integer%5B1..%5D+sequence%29+%7B%0A++Boolean+result+%3A%3D+NO%3B%0A++for+%28i+%3D+2..length%28sequence%29%29+%7B%0A++++if+%28isPrime%28sequence%5Bi%5D%29%29+%7B%0A++++++result+%3A%3D+YES%3B%0A++++%7D%0A++%7D%0A%7D"></iframe>
+
+<h2 id="algorithmic-patterns-over-intervals">Algorithmic patterns over intervals<a class="headerlink" href="#algorithmic-patterns-over-intervals" title="Permanent link">&para;</a></h2>
+<p>An object-oriented programming summary of interval-based patterns of algorithms.</p>
+<h3 id="summation">Summation<a class="headerlink" href="#summation" title="Permanent link">&para;</a></h3>
+<p>Consider an arbitrary set <span class="arithmatex">\(H\)</span>, a binary operation <span class="arithmatex">\(\text{+}:H\times H\to H\)</span> called <strong>addition</strong>, a neutral element <span class="arithmatex">\(0\in H\)</span> called <strong>zero</strong>, such that, <span class="arithmatex">\(0+h\mapsto h\)</span> for all <span class="arithmatex">\(h\in H\)</span>, and a unary function <span class="arithmatex">\(f:[m, n]\to H\)</span> which maps integers in interval <span class="arithmatex">\([m,n]\subseteq\mathbb{Z}\)</span> to <span class="arithmatex">\(H\)</span>.</p>
+<p>The summation pattern takes an integer interval, perform operations on it, and reduce it down a single element.</p>
+<div class="arithmatex">\[
+\begin{aligned}
+A&amp;:=(m:\mathbb{Z}, n:\mathbb{Z}, r:\mathbb{H})\\
+\text{pre}&amp;:=m=m'\land n=n'\\
+\text{post}&amp;:=\text{pre}\land\left(r=\sum_{i=m}^{n} f(i)\right)
+\end{aligned}
+\]</div>
+<iframe loading="lazy" height="auto" width="100%" src="https://eurydia.github.io/project-structogram-builder-online/?preview=true&content=%24r%3A%3D0%24%3B%0Afor+%28%24i+%3D+m..n%24%29+%7B%0A++%24r%3A%3D%5Ctext%7Badd%7D%28r%2C+f%28i%29%29%24%3B%0A%7D%0A" style="aspect-ratio: 16/10; border: none;"></iframe>
+
+<h3 id="counting_1">Counting<a class="headerlink" href="#counting_1" title="Permanent link">&para;</a></h3>
+<p>Consider a predicate function <span class="arithmatex">\(\text{pred}:[m,n]\to\mathbb{L}\)</span> which maps each integer in the interval <span class="arithmatex">\([m,n]\subseteq\mathbb{Z}\)</span> to <span class="arithmatex">\(\mathbb{L}:=\{\top,\bot\}\)</span>.</p>
+<p>In general, the counting pattern takes an interval and <strong>count</strong> the number of elements which satisfy a condition.</p>
+<div class="arithmatex">\[
+\begin{aligned}
+A&amp;:=(m:\mathbb{Z}, n:\mathbb{Z}, r:\mathbb{Z})\\
+\text{pre}&amp;:=m=m'\land n=n'\\
+\text{post}&amp;:=\text{pre}\land\left(r=\sum_{\substack{i=m\\ \text{pred}(i)}}^{n} 1\right)
+\end{aligned}
+\]</div>
+<iframe loading="lazy" height="auto" width="100%" src="https://eurydia.github.io/project-structogram-builder-online/?preview=true&content=%24r%3A%3D0%24%3B%0Afor+%28%24i+%3D+m..n%24%29+%7B%0A++if+%28%24%5Ctext%7Bpred%7D%28i%29%24%29+%7B%0A++++r+%3A%3D+r+%2B+1%3B%0A++%7D%0A%7D%0A" style="aspect-ratio: 16/10; border: none;"></iframe>
+
+<h3 id="maximum-selection">Maximum selection<a class="headerlink" href="#maximum-selection" title="Permanent link">&para;</a></h3>
+<p>Consider a totally-ordered set <span class="arithmatex">\(H\)</span>, a total-ordering binary relation <span class="arithmatex">\(\gt\subseteq H\times H\)</span> called <strong>greater than</strong>, and a unary function <span class="arithmatex">\(f:[m, n]\to H\)</span> which maps integers in interval <span class="arithmatex">\([m,n]\subseteq\mathbb{Z}\)</span> to <span class="arithmatex">\(H\)</span>.</p>
+<p>The maxmima selection pattern takes a integer interval, and returns the <strong>maximal element</strong>. The semantic meaning of <strong>maximal element</strong> is different based on context and implementation.</p>
+<div class="arithmatex">\[
+\begin{aligned}
+A&amp;:=(m:\mathbb{Z}, n:\mathbb{Z}, r:\mathbb{H}, k_{r}:\mathbb{Z})\\
+\text{pre}&amp;:=m=m'\land n=n'\\
+\text{post}&amp;:=\text{pre}\land\left((r,k_{r})=\max_{i=m}^{n} f(i)\right)
+\end{aligned}
+\]</div>
+<iframe loading="lazy" height="auto" width="100%" src="https://eurydia.github.io/project-structogram-builder-online/?preview=true&content=%24r%3A%3Df%28m%29%24%3B%0A%24k_%7Br%7D%3A%3Dm%24%3B%0Afor+%28%24i+%3D+%28m%2B1%29..n%24%29+%7B%0A++if+%28%24f%28i%29+%5Cgt+r%24%29+%7B%0A++++%24r+%3A%3D+f%28i%29%24%3B%0A++++%24k_%7Br%7D%3A%3Di%24%3B%0A++%7D%0A%7D%0A" style="aspect-ratio: 16/10; border: none;"></iframe>
+
+<h3 id="conditional-maximum-selection">Conditional maximum selection<a class="headerlink" href="#conditional-maximum-selection" title="Permanent link">&para;</a></h3>
+<p>Consider a totally-ordered set <span class="arithmatex">\(H\)</span>, a total-ordering binary relation <span class="arithmatex">\(\gt\subseteq H\times H\)</span> called <strong>greater than</strong>, a predicate function <span class="arithmatex">\(\text{pred}:[m,n]\to\mathbb{L}\)</span> which maps each integer in the interval <span class="arithmatex">\([m,n]\subseteq\mathbb{Z}\)</span> to <span class="arithmatex">\(\mathbb{L}:=\{\top,\bot\}\)</span>, and a unary function <span class="arithmatex">\(f:[m, n]\to H\)</span> which maps integers in interval <span class="arithmatex">\([m,n]\subseteq\mathbb{Z}\)</span> to <span class="arithmatex">\(H\)</span>.</p>
+<p>The conditional maximum selection pattern takes an integer interval, and returns the <strong>maximal element</strong> which satisfy the given condition.</p>
+<div class="arithmatex">\[
+\begin{aligned}
+A&amp;:=(m:\mathbb{Z}, n:\mathbb{Z}, u:\mathbb{L}, r:\mathbb{H}, k_{r}:\mathbb{Z})\\
+\text{pre}&amp;:=m=m'\land n=n'\\
+\text{post}&amp;:=\text{pre}\land\left((u, r,k_{r})=\max_{\substack{i=m\\\text{pred}(i)}}^{n} f(i)\right)
+\end{aligned}
+\]</div>
+<iframe loading="lazy" height="auto" width="100%" src="https://eurydia.github.io/project-structogram-builder-online/?preview=true&content=%24u%3A%3D%5Cbot%24%3B%0Afor+%28%24i+%3D+m..n%24%29+%7B%0A++if+%28%24%5Ctext%7Bpred%7D%28i%29%24%29%7B%0A++++if+%28%24u%24%29+%7B%0A++++++if+%28%24f%28i%29%5Cgt+r%24%29+%7B%0A++++++++%24r%3A%3Df%28i%29%24%3B%0A++++++++%24k_%7Br%7D%3A%3Di%24%3B++%0A++++++%7D%0A++++%7D+else%7B%0A++++++%24u%3A%3D%5Ctop%24%3B%0A++++++%24r%3A%3Df%28i%29%24%3B%0A++++++%24k_%7Br%7D%3A%3Di%24%3B%0A++++%7D%0A++%7D%0A%7D%0A" style="aspect-ratio: 16/10; border: none;"></iframe>
+
+<h3 id="selection_1">Selection<a class="headerlink" href="#selection_1" title="Permanent link">&para;</a></h3>
+<p>Consider a arbitrary set <span class="arithmatex">\(H\)</span> and a predicate function <span class="arithmatex">\(p:[m,n]\to\mathbb{L}\)</span> which maps each integer in the interval <span class="arithmatex">\([m,n]\subseteq\mathbb{Z}\)</span> to <span class="arithmatex">\(\mathbb{L}:=\{\top,\bot\}\)</span>.</p>
+<p>The selection pattern takes an integer interval and returns an element which satisfy the given condition with the assumption that such a element exists.</p>
+<div class="arithmatex">\[
+\begin{aligned}
+A&amp;:=(m:\mathbb{Z}, k:\mathbb{Z})\\
+\text{pre}&amp;:=m=m'\land (\exists k\in\mathbb{Z}: k\ge m\land p(k))\\
+\text{post}&amp;:=\text{pre}\land\left(k=\underset{i\ge m}{\text{SELECT }} p(i)\right)
+\end{aligned}
+\]</div>
+<iframe loading="lazy" height="auto" width="100%" src="https://eurydia.github.io/project-structogram-builder-online/?preview=true&content=%24k%3A%3Dm%24%3B%0Afor+%28%24%5Cneg+p%28k%29%24%29+%7B%0A++%24k+%3A%3D+k+%2B+1%24%3B%0A%7D" style="aspect-ratio: 16/10; border: none;"></iframe>
+
+<h3 id="linear-search">Linear search<a class="headerlink" href="#linear-search" title="Permanent link">&para;</a></h3>
+<p>Consider a arbitrary set <span class="arithmatex">\(H\)</span> and a predicate function <span class="arithmatex">\(p:[m,n]\to\mathbb{L}\)</span> which maps each integer in the interval <span class="arithmatex">\([m,n]\subseteq\mathbb{Z}\)</span> to <span class="arithmatex">\(\mathbb{L}:=\{\top,\bot\}\)</span>.</p>
+<p>The linear search pattern takes an integer interval and returns the first element which satisfy the given condition, though such an element might not exist.</p>
+<div class="arithmatex">\[
+\begin{aligned}
+A&amp;:=(m:\mathbb{Z},n:\mathbb{Z},u:\mathbb{L}, k:\mathbb{Z})\\
+\text{pre}&amp;:=m=m'\land n=n'\\
+\text{post}&amp;:=\text{pre}\land\left((u, k) = \underset{i=m}{\overset{n}{\text{SEARCH }}} p(i)\right)
+\end{aligned}
+\]</div>
+<iframe loading="lazy" height="auto" width="100%" src="https://eurydia.github.io/project-structogram-builder-online/?preview=true&content=%24u%3A%3D%5Cbot%24%3B%0A%24k%3A%3Dm%24%3B%0Awhile+%28%24%5Cneg+u%5Cland+k%5Cle+n%24%29+%7B%0A++%24u%3A%3Dp%28k%29%24%3B%0A++%24k%3A%3D+k+%2B+1%24%3B%0A%7D" style="aspect-ratio: 16/10; border: none;"></iframe>
+
+<h3 id="binary-search">Binary search<a class="headerlink" href="#binary-search" title="Permanent link">&para;</a></h3>
+<p>Consider a totally-ordered set <span class="arithmatex">\(H\)</span>, an element <span class="arithmatex">\(h\in H\)</span>, a total-ordering binary relation <span class="arithmatex">\(\gt\subseteq H\times H\)</span> called <strong>greater than</strong>, and a monotomically-increasing unary function <span class="arithmatex">\(f:[m,n]\to H\)</span> which maps integers in the interval <span class="arithmatex">\([m,n]\)</span> to <span class="arithmatex">\(H\)</span>.</p>
+<p>The binary search pattern takes an integer interval and decide whether it contains specific element or not.</p>
+<div class="arithmatex">\[
+\begin{aligned}
+A&amp;:=(m:\mathbb{Z},n:\mathbb{Z},h: H, u:\mathbb{L}, k:\mathbb{Z})\\
+\text{pre}&amp;:=m=m'\land n=n'\\
+\text{post}&amp;:=\text{pre}\land\left(u=\left(\exists i\in\mathbb{Z}:i\in[m,n]\land f(i)=h\right)\right)\land\left(u\implies (k\in[m,n]\land f(k)=h\right)
+\end{aligned}
+\]</div>
+<iframe loading="lazy" height="auto" width="100%" src="https://eurydia.github.io/project-structogram-builder-online/?preview=true&content=%24%5Ctext%7Blower%7D+%3A%3D+m%24%3B%0A%24%5Ctext%7Bupper%7D+%3A%3D+n%24%3B%0A%24u%3A%3D%5Cbot%24%3B%0Awhile+%28%24%5Cneg+u%5Cland%5Ctext%7Blower%7D%5Cle%5Ctext%7Bupper%7D%24%29+%7B%0A++%24k%3A%3D+%5Cfrac%7B%5Ctext%7Blower%7D%2B%5Ctext%7Bupper%7D%7D%7B2%7D%24%3B%0A++if+%28%24f%28k%29%3Dh%24%29+%7B%0A++++%24u%3A%3D%5Ctop%24%3B%0A++%7D+else+%7B%0A++++if+%28%24f%28k%29%5Cgt+h%24%29+%7B%0A++++++%24%5Ctext%7Bupper%7D%3A%3D%5Ctext%7Bupper%7D-1%24%3B%0A++++%7D%0A++++else+%7B%0A++++++%24%5Ctext%7Blower%7D%3A%3D%5Ctext%7Blower%7D-1%24%3B%0A++++%7D%0A++%7D%0A%7D" style="aspect-ratio: 16/10; border: none;"></iframe>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
