@@ -2,7 +2,7 @@
 
 ## Getting started
 
-To begin, head over to the live editor at [https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/](https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/).
+To begin, head over to the live editor at [https://eurydia.github.io/project-structogram-builder-online/](https://eurydia.github.io/project-structogram-builder-online/).
 
 ## Interface overview
 
@@ -19,7 +19,7 @@ If you find it hidden, tap on the "SHOW CODE" button to reveal it.
 In the code editor, type "Hello World!;."
 The project should generate the corresponding diagram:
 
-<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-nassi-shneiderman-diagram-builder-online/?preview=true&content=Hello+World%21%3B"></iframe>
+<iframe width="100%" style="aspect-ratio: 16/10; border:none;" loading="lazy" src="https://eurydia.github.io/project-structogram-builder-online/?preview=true&content=Hello+World%21%3B"></iframe>
 
 ## Export
 
