@@ -10,7 +10,7 @@ Various approaches were adopted by my peers to address this challenge.
 Some persevered with Structorizer, while others turned to graphic design tools such as [Figma](https://www.figma.com/).
 Some even resorted to hand-drawing diagrams on paper and capturing them with a camera.
 
-In my case, I proactively addressed the challenge by developing a [React](https://react.dev/) [UI component library](https://github.com/Eurydia/project-nassi-shneiderman-diagram-builder) to construct diagrams, initially meant for my personal use.
+In my case, I proactively addressed the challenge by developing a [React](https://react.dev/) [UI component library](https://www.npmjs.com/package/@eurydos/structogram-component) to construct diagrams, initially meant for my personal use.
 As my proficiency in diagram creation became evident, several of my peers approached me for assistance, highlighting a clear need for a more accessible and user-friendly alternative.
 
 Recognizing the inefficiency of personally creating diagrams for others on an individual basis, I observed the widespread need for a more accessible and user-friendly alternative.
